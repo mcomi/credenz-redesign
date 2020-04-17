@@ -1,0 +1,109 @@
+.toast-top {
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.85);
+  background-clip: padding-box;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: fixed;
+}
+
+.toast-body {
+  height: 50px;
+}
+
+.toast-top span {
+  font-size: 11px;
+  color: greenyellow;
+  line-height: 8px;
+}
+
+.masthead {
+  height: 100vh;
+  padding-top: 100px;
+  min-height: 500px;
+  background-image: url("../img/young-girl-listening-to-music-outdoors-PPFA6ZQ.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.navbar {
+  margin-top: 50px;
+  max-height: 76px;
+}
+
+.navbar-menu {
+  margin-top: 126px;
+}
+
+.menu,
+.navbar-nav {
+  width: 100%;
+}
+
+.logo {
+  height: 50px;
+}
+
+.icon-btn {
+  height: 20px;
+}
+
+.close-icon {
+  height: 15px;
+  vertical-align: center;
+}
+
+.white-icon {
+  -webkit-filter: opacity(0.5) drop-shadow(0 0 0 white);
+  filter: opacity(0.5) drop-shadow(0 0 0 white);
+}
+
+.btn-primary {
+  background-color: #f16192;
+  border: 0;
+  border-bottom: 1px solid #be3564;
+}
+
+.btn-secondary {
+  background-color: #6dc72a;
+  border: 0;
+}
+
+.form-action {
+  background-color: #6dc72a;
+  padding: 4px 15px;
+  border-radius: 15px;
+}
+
+.testimonial-card {
+  margin: 0 auto;
+}
+.testimonial-card .carousel-item {
+  height: 200px;
+}
+.testimonial-card .carousel-caption {
+  padding: 0;
+  right: 0;
+  left: 0;
+  color: #3d3d3d;
+}
+.testimonial-card .carousel-caption h3 {
+  color: #3d3d3d;
+}
+.testimonial-card .carousel-caption p {
+  line-height: 30px;
+}
+.testimonial-card .carousel-caption .col-sm-3 {
+  display: flex;
+  align-items: center;
+}
+.testimonial-card .carousel-caption .col-sm-9 {
+  text-align: left;
+}
+.testimonial-card .carousel-control-prev,
+.card .carousel-control-next {
+  hover: #ef4c23;
+  color: #3d3d3d !important;
+  opacity: 1 !important;
+}
