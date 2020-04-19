@@ -78,6 +78,7 @@
 
 .testimonial-card {
   margin: 0 auto;
+  border: 0;
 }
 .testimonial-card .carousel-item {
   height: 200px;
@@ -86,6 +87,8 @@
   padding: 0;
   right: 0;
   left: 0;
+  bottom: 0;
+  top: 0;
   color: #3d3d3d;
 }
 .testimonial-card .carousel-caption h3 {
@@ -102,8 +105,268 @@
   text-align: left;
 }
 .testimonial-card .carousel-control-prev,
-.card .carousel-control-next {
-  hover: #ef4c23;
+.testimonial-card .carousel-control-next {
   color: #3d3d3d !important;
   opacity: 1 !important;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none;
+  color: #fff;
+  font-size: 14px;
+  background-color: #cd3a54;
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+}
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  opacity: 0.85;
+}
+.carousel-control-prev {
+  left: 40%;
+  top: 110%;
+}
+.carousel-control-next {
+  right: 40%;
+  top: 110%;
+}
+
+.separator {
+  width: 30px;
+  border: 2px solid #be3564;
+}
+
+.separator:before {
+  content: "";
+  border-bottom: 1px solid #d0d0d0;
+  width: 50px;
+  height: 0.5px;
+  float: left;
+  margin: 0px 0px 0px -52px;
+}
+
+.separator:after {
+  content: "";
+  border-bottom: 1px solid #d0d0d0;
+  width: 50px;
+  height: 0;
+  margin: 0px 0px 0px 32px;
+  position: absolute;
+}
+
+.testimonials {
+  background-image: url("../img/BG3.jpg");
+  background-size: cover;
+}
+
+.perfil {
+  width: 197px;
+}
+
+.quote-card {
+  border: 1px solid #eeeeee;
+  background-color: rgb(250, 250, 255);
+  height: 172px;
+  margin-left: -32px;
+  margin-top: 1rem;
+  padding: 2rem 8rem 1rem 3rem;
+}
+
+.quote-icon {
+  font-size: 50px;
+  font-family: "Georgia";
+  color: rgb(216, 216, 216);
+  line-height: 0.52;
+  position: absolute;
+}
+
+.quote-icon.left {
+  left: 1rem;
+}
+
+.quote-icon.rigth {
+  right: 7rem;
+  bottom: 1rem;
+}
+
+.quote-card small {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(136, 136, 136);
+  line-height: 1.2;
+}
+
+.smallest.mute {
+  margin-top: 4px;
+  font-size: 16px;
+  display: block;
+  color: #f16192;
+}
+
+.steps {
+  background-color: #5e5bb6;
+}
+
+.row-with-medallion {
+  position: relative;
+  font-size: 24px;
+  font-weight: bold;
+}
+.row-with-medallion .quadrant {
+  padding: 1rem 9rem;
+}
+.the-medallion {
+  position: absolute;
+  left: 42%;
+  top: 26%;
+  margin-top: -75px;
+  margin-left: -75px;
+}
+
+.icon-step {
+  height: 20px;
+  margin: 14px;
+  fill: black;
+}
+
+.row-with-medallion small {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(204, 204, 204);
+  line-height: 1.733;
+  text-align: center;
+}
+
+.row-with-medallion p {
+  line-height: 9px;
+}
+
+a {
+  color: inherit;
+}
+
+.menu-steps {
+  width: 373px;
+  height: 373px;
+}
+
+.credenz-icon {
+  background: transparent;
+  border-radius: 100%;
+  width: 350px;
+  height: 350px;
+  margin-left: -13px;
+  margin-top: 64px;
+  position: absolute;
+  border: 1px solid rgb(120, 117, 198);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform ease-out 200ms;
+  transition: -webkit-transform ease-out 200ms;
+  transition: transform ease-out 200ms;
+  transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
+}
+
+.credenz-icon img {
+  width: 100px;
+  position: absolute;
+  top: 36%;
+  left: 38%;
+}
+.steps-icon {
+  background: #ffffff;
+  border-radius: 100%;
+  width: 50px;
+  height: 50px;
+}
+
+.steps-icon img {
+  -webkit-filter: grayscale(1) invert(0);
+  filter: grayscale(1) invert(0);
+}
+
+.steps-icon:hover img {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+}
+
+.steps-icon:hover {
+  background: #f16192;
+  color: #ffffff;
+}
+
+.steps-icon-1 {
+  position: absolute;
+  left: 37%;
+  top: 40px;
+}
+
+.steps-icon-2 {
+  position: absolute;
+  left: -9px;
+  top: 33%;
+}
+
+.steps-icon-3 {
+  position: absolute;
+  right: 40px;
+  top: 33%;
+}
+
+.steps-icon-4 {
+  position: absolute;
+  right: 16%;
+  bottom: -3%;
+}
+
+.steps-icon-5 {
+  position: absolute;
+  left: 4%;
+  bottom: -3%;
+}
+.card-header {
+  background: #ffffff;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.card-header img.collapse-icon {
+  width: 1em;
+  margin: 10px 0;
+}
+
+.card-header h2 {
+  font-size: 14px !important;
+  font-family: "Open Sans";
+  color: rgb(119, 119, 119);
+  text-transform: uppercase;
+}
+
+.collapse .card-body {
+  padding-top: 0px;
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: rgb(136, 136, 136);
+  line-height: 1.733;
+  text-align: left;
+}
+
+.footer {
+  background-color: rgb(39, 39, 39);
+  color: #fff;
+}
+
+.footer-nav {
+  justify-content: space-between;
+  width: 95%;
+}
+
+.footer-nav .nav-link {
+  color: #fff;
+}
+
+.footer-bottom {
+  background-color: rgb(30, 30, 30);
+  height: 80px;
 }
