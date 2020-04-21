@@ -15,3 +15,9 @@ $(".collapse").on("hide.bs.collapse", function () {
     .find("img.collapse-icon")
     .attr("src", "assets/img/icons/plus.png");
 });
+
+$("#close-icon").click(function () {
+  $("#top-toast").hide();
+  $("#logo-navbar").css("margin-top", "0");
+  $("#menu-navbar").css("margin-top", "76px");
+});

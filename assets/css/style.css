@@ -1,17 +1,4 @@
-.toast-top {
-  width: 100%;
-  color: #ffffff;
-  background-color: rgba(0, 0, 0, 0.85);
-  background-clip: padding-box;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  position: fixed;
-}
-
-.toast-body {
-  height: 50px;
-}
-
-.toast-top span {
+.navbar-dark label {
   font-size: 11px;
   color: greenyellow;
   line-height: 8px;
@@ -21,10 +8,43 @@
   height: 100vh;
   padding-top: 100px;
   min-height: 500px;
-  background-image: url("../img/young-girl-listening-to-music-outdoors-PPFA6ZQ.jpg");
+  background-image: url("../img/bg1.jpg");
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
+}
+
+.masthead-title {
+  font-size: 50px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  text-align: center;
+}
+
+.masthead-subtitle {
+  font-size: 30px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  line-height: 1.667;
+  text-align: center;
+}
+
+.masthead-list {
+  font-size: 18px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  text-align: center;
+}
+.navbar.navbar-dark {
+  margin-top: 0;
+  height: 50px;
+  color: #ffffff;
+  background-color: #000000 !important;
 }
 
 .navbar {
@@ -41,12 +61,49 @@
   width: 100%;
 }
 
+.navbar-nav .nav-link span.decorator {
+  opacity: 0;
+}
+
+.navbar-nav .nav-link:hover span.decorator {
+  border: 2px solid #be3564;
+  height: 2px;
+  display: block;
+  width: 30px;
+  text-align: center;
+  margin: 0 auto;
+  opacity: 1;
+}
+
+.navbar-nav .nav-link:hover span.decorator:before {
+  content: "";
+  border-bottom: 1px solid #d0d0d0;
+  width: 50px;
+  height: 0.5px;
+  float: left;
+  margin: 0px 0px 0px -52px;
+}
+
+.navbar-nav .nav-link:hover span.decorator:after {
+  content: "";
+  border-bottom: 1px solid #d0d0d0;
+  width: 50px;
+  height: 0;
+  margin: 0px 0px 0px 15px;
+  position: absolute;
+}
+
 .logo {
   height: 50px;
 }
 
 .icon-btn {
   height: 20px;
+}
+
+.check-icon {
+  height: 15px;
+  margin-left: 10px;
 }
 
 .close-icon {
@@ -76,9 +133,22 @@
   border-radius: 15px;
 }
 
+.form-action label {
+  color: white;
+}
+
+.testimonial-subtitle {
+  font-size: 15px;
+  font-family: "Helvetica";
+  color: rgb(136, 136, 136);
+  line-height: 1.733;
+  text-align: center;
+}
+
 .testimonial-card {
   margin: 0 auto;
   border: 0;
+  background: transparent;
 }
 .testimonial-card .carousel-item {
   height: 200px;
@@ -207,6 +277,23 @@
 
 .steps {
   background-color: #5e5bb6;
+  min-height: 120vh;
+}
+
+.steps-subtitle {
+  font-size: 15px;
+  font-family: "Open Sans";
+  color: rgb(204, 204, 204);
+  line-height: 1.733;
+  text-align: center;
+}
+
+.step-title {
+  font-size: 22px;
+  font-family: "Open Sans";
+  color: white;
+  line-height: 1.8;
+  text-align: center;
 }
 
 .row-with-medallion {
@@ -215,12 +302,12 @@
   font-weight: bold;
 }
 .row-with-medallion .quadrant {
-  padding: 1rem 9rem;
+  max-width: 270px;
 }
 .the-medallion {
   position: absolute;
   left: 42%;
-  top: 26%;
+  top: 36%;
   margin-top: -75px;
   margin-left: -75px;
 }
@@ -232,10 +319,10 @@
 }
 
 .row-with-medallion small {
-  font-size: 14px;
+  font-size: 13px;
   font-family: "Open Sans";
   color: rgb(204, 204, 204);
-  line-height: 1.733;
+  line-height: 1.633;
   text-align: center;
 }
 
@@ -368,5 +455,30 @@ a {
 
 .footer-bottom {
   background-color: rgb(30, 30, 30);
-  height: 80px;
+  height: 50px;
+}
+
+.footer p {
+  font-size: 13px;
+  font-family: "Open Sans";
+  color: rgb(152, 152, 152);
+  line-height: 1.846;
+  padding-right: 1rem;
+  padding-top: 2rem;
+  text-align: justify;
+}
+
+.footer .nav-link {
+  font-size: 13px;
+  font-family: "Open Sans";
+  color: rgb(255, 255, 255);
+  line-height: 1.154;
+}
+
+.footer-bottom {
+  font-size: 12px;
+  font-family: "Open Sans";
+  color: rgb(152, 152, 152);
+  line-height: 2.667;
+  text-align: center;
 }
