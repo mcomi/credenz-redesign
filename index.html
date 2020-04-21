@@ -12,6 +12,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -37,7 +38,7 @@
           </form>
         </div>
             <div class="justify-content-end">
-              <span>Cerrar</span>
+              <span class="d-none d-sm-none d-md-block">Cerrar</span>
               <img
                 src="assets/img/icons/cancel-white.png"
                 class="close-icon" id="close-icon"
@@ -125,23 +126,26 @@
         <div class="row h-100 align-items-center">
           <div class="col-12 text-center">
             <h1 class="font-weight-light masthead-title">
-              ¿Cuánto necesitas?
+              ¿ Cuánto necesitas ?
             </h1>
             <p class="masthead-subtitle">Tenemos una solución para ti</p>
-            <ul class="list-unstyled text-center masthead-list">
-              <li>
-                <img src="assets/img/icons/checklist.png" alt="" /> Totalmente
-                gratis
-              </li>
-              <li>
-                <img src="assets/img/icons/checklist.png" alt="" /> Respuesta
-                inmediata
-              </li>
-              <li>
-                <img src="assets/img/icons/checklist.png" alt="" /> 90% de
-                aprobación
-              </li>
-            </ul>
+            <div class="d-flex">
+
+              <ul class="list-unstyled masthead-list mx-auto text-left">
+                <li>
+                  <img src="assets/img/icons/checklist.png" class="mr-2" alt="" /> Totalmente
+                  gratis
+                </li>
+                <li>
+                  <img src="assets/img/icons/checklist.png" class="mr-2" alt="" /> Respuesta
+                  inmediata
+                </li>
+                <li>
+                  <img src="assets/img/icons/checklist.png" class="mr-2" alt="" /> 90% de
+                  aprobación
+                </li>
+              </ul>
+            </div>
             <form class="form-inline justify-content-center">
               <div class="form-group form-action mx-sm-3 mb-2">
                 <label for="amount" class="mr-3">Necesito</label>
@@ -162,15 +166,15 @@
     <!-- Page Content -->
     <section class="py-5 testimonials">
       <div class="container">
-        <h2 class="font-weight-light text-center">Testimonios</h2>
+        <h2 class="header-violeta text-center">Testimonios</h2>
         <hr class="separator" />
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-lg-8 col-12 mx-auto">
             <p class="testimonial-subtitle">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               
             </p>
-            <div class="card testimonial-card">
+            <div class="card testimonial-card mb-5">
               <div
                 id="carouselExampleControls"
                 class="carousel slide"
@@ -182,14 +186,14 @@
                     <div class="bg"></div>
                     <div class="carousel-caption">
                       <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-md-3 col-5">
                           <img
                             src="assets/img/perfil.png"
                             alt=""
                             class="img-fluid"
                           />
                         </div>
-                        <div class="col-sm-9 quote-card">
+                        <div class="col-md-9 col-7 quote-card">
                           <span class="quote-icon left">"</span>
                           <small
                             >Me pareció una excelente atención, realmente les
@@ -205,14 +209,14 @@
                     <div class="bg"></div>
                     <div class="carousel-caption">
                       <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-md-3 col-5">
                           <img
                             src="assets/img/perfil.png"
                             alt=""
                             class="img-fluid"
                           />
                         </div>
-                        <div class="col-sm-9 quote-card">
+                        <div class="col-md-9 col-7 quote-card">
                           <span class="quote-icon left">"</span>
                           <small
                             >Me pareció una excelente atención, realmente les
@@ -228,14 +232,14 @@
                     <div class="bg"></div>
                     <div class="carousel-caption">
                       <div class="row">
-                        <div class="col-sm-3">
+                        <div class="col-md-3 col-5">
                           <img
                             src="assets/img/perfil.png"
                             alt=""
                             class="img-fluid"
                           />
                         </div>
-                        <div class="col-sm-9 quote-card">
+                        <div class="col-md-9 col-7 quote-card">
                           <span class="quote-icon left">"</span>
                           <small
                             >Me pareció una excelente atención, realmente les
@@ -289,9 +293,11 @@
         <div class="container">
           <div class="row-with-medallion">
             <div class="row">
-              <div class="col-md-6 offset-md-3 d-flex justify-content-center">
+              <div class="col-12 col-md-6 offset-md-3 d-flex justify-content-center">
                 <div class="quadrant text-center">
-                  
+                  <span class="d-block d-sm-block d-md-none steps-icon">
+                    <img class="icon-step" src="assets/img/icons/magnifying-glass.png" alt="">
+                  </span>
                   <h4 class="step-title">01 Elige tu crédito</h4>
                   <p>
                     <small>
@@ -301,9 +307,11 @@
                   </p>
                 </div>
               </div>
-              <div class="col-md-4 d-flex mb-4 justify-content-end">
+              <div class="col-12 col-md-4 d-flex mb-4 justify-content-end">
                 <div class="quadrant text-center">
-
+                  <span class="d-block d-sm-block d-md-none steps-icon">
+                    <img class="icon-step" src="assets/img/icons/money.png" alt="">
+                  </span>
                   <h4 class="step-title">02 Elige tu crédito</h4>
                   <p>
                     <small>
@@ -313,8 +321,11 @@
                   </p>
                 </div>
               </div>
-              <div class="col-md-4 offset-md-4 mb-4">
+              <div class="col-12 col-md-4 offset-md-4 mb-4">
                 <div class="quadrant text-center">
+                  <span class="d-block d-sm-block d-md-none steps-icon">
+                    <img class="icon-step" src="assets/img/icons/clipboard.png" alt="">
+                  </span>
                   <h4 class="step-title">03 Elige tu crédito</h4>
                   <p>
                     <small>
@@ -324,9 +335,11 @@
                   </p>
                 </div>
               </div>
-              <div class="col-md-5 pt-5 d-flex justify-content-center">
+              <div class="col-12 col-md-5 pt-5 d-flex justify-content-center">
                 <div class="quadrant text-center">
-
+                  <span class="d-block d-sm-block d-md-none steps-icon">
+                    <img class="icon-step" src="assets/img/icons/paper-plane.png" alt="">
+                  </span>
                   <h4 class="step-title">04 Elige tu crédito</h4>
                   <p>
                     <small>
@@ -336,8 +349,11 @@
                   </p>
                 </div>
               </div>
-              <div class="col-md-4 offset-md-3 pt-5 d-flex justify-content-start">
+              <div class="col-12 col-md-4 offset-md-3 pt-5 d-flex justify-content-start">
                 <div class="quadrant">
+                  <span class="d-block d-sm-block d-md-none steps-icon">
+                    <img class="icon-step" src="assets/img/icons/contract.png" alt="">
+                  </span>
                   <h4 class="step-title">05 Elige tu crédito</h4>
                   <p>
                     <small>
@@ -347,10 +363,11 @@
                   </p>
                 </div>
               </div>
-              <div class="the-medallion">
+              <div class="the-medallion d-none d-sm-none d-md-block">
                 <!-- <img src="assets/img/circle-logo.png" alt="" /> -->
                 <nav class="menu-steps">
                   <div class="credenz-icon">
+                    <div class="credenz-icon-inner"></div>
                     <img src="assets/img/circle-logo.png" alt="" />
                   </div>
 
@@ -535,7 +552,7 @@
     <footer class="footer pt-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 col-12">
+          <div class="col-md-3 col-12 logo-container">
             <img
               src="assets/img/logo white.png"
               class="logo img-fluid"
@@ -550,7 +567,7 @@
               Actividades Auxiliares del Crédito.
             </p>
           </div>
-          <div class="col-md-3 col-12">
+          <div class="col-md-3 col-6">
             <h5 class="text-center">Servicios</h5>
             <ul class="nav flex-column pl-3">
               <li class="nav-item">
@@ -586,7 +603,7 @@
               </li>
             </ul>
           </div>
-          <div class="col-md-3 col-12">
+          <div class="col-md-3 col-6">
             <h5 class="text-center">Soluciones</h5>
             <ul class="nav flex-column pl-3">
               <li class="nav-item">

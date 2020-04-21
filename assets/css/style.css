@@ -1,3 +1,6 @@
+body {
+  font-family: "Open Sans", sans-serif;
+}
 .navbar-dark label {
   font-size: 11px;
   color: greenyellow;
@@ -16,9 +19,9 @@
 
 .masthead-title {
   font-size: 50px;
-  font-family: "Open Sans";
+
   color: rgb(255, 255, 255);
-  font-weight: bold;
+  font-weight: 800 !important;
   text-transform: uppercase;
   line-height: 1;
   text-align: center;
@@ -26,7 +29,7 @@
 
 .masthead-subtitle {
   font-size: 30px;
-  font-family: "Open Sans";
+  font-weight: 300;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   line-height: 1.667;
@@ -34,8 +37,8 @@
 }
 
 .masthead-list {
-  font-size: 18px;
-  font-family: "Open Sans";
+  font-size: 17px;
+  font-weight: 200;
   color: rgb(255, 255, 255);
   line-height: 1.2;
   text-align: center;
@@ -73,6 +76,11 @@
   text-align: center;
   margin: 0 auto;
   opacity: 1;
+}
+
+.header-violeta {
+  font-size: 32px;
+  color: rgb(94, 91, 182);
 }
 
 .navbar-nav .nav-link:hover span.decorator:before {
@@ -263,7 +271,7 @@
 
 .quote-card small {
   font-size: 14px;
-  font-family: "Open Sans";
+
   color: rgb(136, 136, 136);
   line-height: 1.2;
 }
@@ -282,7 +290,7 @@
 
 .steps-subtitle {
   font-size: 15px;
-  font-family: "Open Sans";
+
   color: rgb(204, 204, 204);
   line-height: 1.733;
   text-align: center;
@@ -290,7 +298,7 @@
 
 .step-title {
   font-size: 22px;
-  font-family: "Open Sans";
+
   color: white;
   line-height: 1.8;
   text-align: center;
@@ -304,10 +312,11 @@
 .row-with-medallion .quadrant {
   max-width: 270px;
 }
+
 .the-medallion {
   position: absolute;
-  left: 42%;
-  top: 36%;
+  left: 43%;
+  top: 34%;
   margin-top: -75px;
   margin-left: -75px;
 }
@@ -320,7 +329,7 @@
 
 .row-with-medallion small {
   font-size: 13px;
-  font-family: "Open Sans";
+
   color: rgb(204, 204, 204);
   line-height: 1.633;
   text-align: center;
@@ -356,11 +365,22 @@ a {
   transition: transform ease-out 200ms, -webkit-transform ease-out 200ms;
 }
 
+.credenz-icon-inner {
+  background: transparent;
+  border-radius: 100%;
+  width: 235px;
+  height: 235px;
+  margin-left: 60px;
+  margin-top: 57px;
+  position: absolute;
+  border: 1px solid rgb(120, 117, 198);
+}
+
 .credenz-icon img {
   width: 100px;
   position: absolute;
   top: 36%;
-  left: 38%;
+  left: 36%;
 }
 .steps-icon {
   background: #ffffff;
@@ -425,7 +445,7 @@ a {
 
 .card-header h2 {
   font-size: 14px !important;
-  font-family: "Open Sans";
+
   color: rgb(119, 119, 119);
   text-transform: uppercase;
 }
@@ -433,7 +453,7 @@ a {
 .collapse .card-body {
   padding-top: 0px;
   font-size: 14px;
-  font-family: "Open Sans";
+
   color: rgb(136, 136, 136);
   line-height: 1.733;
   text-align: left;
@@ -460,7 +480,7 @@ a {
 
 .footer p {
   font-size: 13px;
-  font-family: "Open Sans";
+
   color: rgb(152, 152, 152);
   line-height: 1.846;
   padding-right: 1rem;
@@ -470,15 +490,77 @@ a {
 
 .footer .nav-link {
   font-size: 13px;
-  font-family: "Open Sans";
+
   color: rgb(255, 255, 255);
   line-height: 1.154;
 }
 
 .footer-bottom {
   font-size: 12px;
-  font-family: "Open Sans";
+
   color: rgb(152, 152, 152);
   line-height: 2.667;
   text-align: center;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+  .navbar-dark .mx-auto {
+    margin-left: 0 !important;
+  }
+  .masthead {
+    background-position: 75%;
+  }
+  .masthead-title {
+    font-size: 30px;
+  }
+  .masthead-subtitle {
+    font-size: 20px;
+  }
+  .form-action {
+    width: 80%;
+    margin-right: 4px;
+  }
+  .form-action .form-control {
+    display: inline;
+    width: 68%;
+  }
+  .quote-card {
+    height: 167px;
+    margin-left: -26px;
+    margin-top: 0.5rem;
+    padding: 1rem;
+  }
+  .quote-icon.rigth {
+    right: 1rem;
+    bottom: -1rem;
+  }
+  .row-with-medallion .quadrant {
+    max-width: 98%;
+  }
+
+  .row-with-medallion .mb-4 {
+    margin-bottom: 0 !important;
+  }
+  .row-with-medallion .pt-5 {
+    padding-top: 0 !important;
+  }
+  .steps-icon {
+    margin: 0 auto;
+  }
+  .card-header {
+    padding: 0.75rem 0.25rem;
+  }
+  .footer .pl-3 {
+    padding-left: 0 !important;
+  }
+  .footer .logo-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer .logo-container img {
+    margin: 0 auto;
+  }
+  .footer-bottom {
+    height: auto;
+  }
 }
