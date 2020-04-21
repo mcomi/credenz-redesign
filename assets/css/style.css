@@ -507,6 +507,9 @@ a {
   .navbar-dark .mx-auto {
     margin-left: -22px !important;
   }
+  .navbar-dark .form-inline input {
+    width: 148px;
+  }
   .logo {
     height: 36px;
   }
