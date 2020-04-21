@@ -505,7 +505,7 @@ a {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .navbar-dark .mx-auto {
-    margin-left: -18px !important;
+    margin-left: -22px !important;
   }
   .logo {
     height: 36px;
