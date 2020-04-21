@@ -505,13 +505,16 @@ a {
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
   .navbar-dark .mx-auto {
-    margin-left: 0 !important;
+    margin-left: -18px !important;
+  }
+  .logo {
+    height: 36px;
   }
   .masthead {
     background-position: 75%;
   }
   .masthead-title {
-    font-size: 30px;
+    font-size: 28px;
   }
   .masthead-subtitle {
     font-size: 20px;
@@ -524,14 +527,21 @@ a {
     display: inline;
     width: 68%;
   }
+  .form-action label {
+    color: white;
+    margin-right: 0 !important;
+  }
   .quote-card {
     height: 167px;
     margin-left: -26px;
     margin-top: 0.5rem;
     padding: 1rem;
   }
+  .quote-icon.left {
+    left: 0rem;
+  }
   .quote-icon.rigth {
-    right: 1rem;
+    right: 0rem;
     bottom: -1rem;
   }
   .row-with-medallion .quadrant {
@@ -544,11 +554,20 @@ a {
   .row-with-medallion .pt-5 {
     padding-top: 0 !important;
   }
+  .row-with-medallion small {
+    font-size: 14px;
+  }
   .steps-icon {
     margin: 0 auto;
   }
   .card-header {
     padding: 0.75rem 0.25rem;
+  }
+  .accordion > .card .card-header {
+    margin-bottom: -20px;
+  }
+  .card-header h2 > img {
+    height: 20px;
   }
   .footer .pl-3 {
     padding-left: 0 !important;
