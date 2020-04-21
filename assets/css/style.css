@@ -563,4 +563,9 @@ a {
   .footer-bottom {
     height: auto;
   }
+  .menu,
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
 }
