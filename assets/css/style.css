@@ -445,16 +445,15 @@ a {
 
 .card-header h2 {
   font-size: 14px !important;
-
   color: rgb(119, 119, 119);
   text-transform: uppercase;
 }
-
+.collapsing .card-body,
 .collapse .card-body {
+  color: rgb(136, 136, 136) !important;
+  font-size: 13px !important;
+  font-weight: 200 !important;
   padding-top: 0px;
-  font-size: 14px;
-
-  color: rgb(136, 136, 136);
   line-height: 1.733;
   text-align: left;
 }
