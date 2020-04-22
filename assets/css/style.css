@@ -17,6 +17,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.masthead-form {
+  height: 100vh;
+  padding-top: 100px;
+  min-height: 500px;
+  background-image: url("../img/rocket-child.jpg");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+}
+
 .masthead-title {
   font-size: 50px;
 
@@ -500,6 +510,164 @@ a {
   color: rgb(152, 152, 152);
   line-height: 2.667;
   text-align: center;
+}
+.input-form,
+select.form-control,
+select.form-control:focus {
+  /* styling */
+  background-color: transparent;
+  border: thin solid white;
+  border-radius: 4px;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: white;
+  outline: none;
+}
+
+.input-form,
+.input-form::placeholder {
+  padding: 0.5em 1em 0.5em 1em;
+  color: white;
+  text-align: center;
+  font-weight: 200;
+}
+
+select.form {
+  background: url("../img/icons/down-arrow.png") no-repeat right 0.75rem center,
+    linear-gradient(to right, #fff, #fff) no-repeat right 2rem center;
+  /* background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), 100% 0; */
+  background-size: 12px, 1px;
+  color: white;
+}
+
+select.form:after {
+  border-left: 1px solid #fff;
+  content: "\00a0";
+  position: absolute;
+  top: 0;
+  right: 46px;
+  z-index: 2;
+  display: block;
+  height: 38px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.container-dependencia {
+  margin: 0.5rem;
+}
+.container-dependencia label {
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+}
+
+.masthead-form .form-group label {
+  color: white;
+  font-weight: 300;
+}
+
+.container-dependencia img {
+  height: 60px;
+}
+
+.btn-step {
+  background-color: #5c57aa;
+  color: white;
+}
+
+.code-input {
+  width: 40px;
+}
+
+.toggle {
+  margin: 0 0 1.5rem;
+  box-sizing: border-box;
+  font-size: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row nowrap;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: stretch;
+  align-items: stretch;
+}
+.toggle input {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: -9999px;
+}
+.toggle input + label {
+  margin: 0;
+  padding: 0.75rem 2rem;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  border: solid 1px #fff;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1rem;
+  line-height: 140%;
+  text-align: center;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  -webkit-transition: border-color 0.15s ease-out, color 0.25s ease-out,
+    background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+  transition: border-color 0.15s ease-out, color 0.25s ease-out,
+    background-color 0.15s ease-out, box-shadow 0.15s ease-out;
+  /* ADD THESE PROPERTIES TO SWITCH FROM AUTO WIDTH TO FULL WIDTH */
+  /*flex: 0 0 50%; display: flex; justify-content: center; align-items: center;*/
+  /* ----- */
+}
+.toggle input + label:first-of-type {
+  border-radius: 6px 0 0 6px;
+  border-right: none;
+}
+.toggle input + label:last-of-type {
+  border-radius: 0 6px 6px 0;
+  border-left: none;
+}
+.toggle input:hover + label {
+  border-color: #fff;
+}
+.toggle input:checked + label {
+  background-color: #63b525;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 200;
+  box-shadow: 0 0 10px rgba(99, 181, 37, 0.5);
+  border-color: #63b525;
+  z-index: 1;
+}
+.toggle input:focus + label {
+  outline: none;
+}
+@media (max-width: 800px) {
+  .toggle input + label {
+    padding: 0.75rem 0.25rem;
+    -webkit-box-flex: 0;
+    flex: 0 0 50%;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+  }
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
