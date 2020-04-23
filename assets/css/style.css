@@ -572,10 +572,17 @@ input[type="radio"] {
   border-radius: 10px;
   padding: 0.5rem 1rem;
 }
+.container-dependencia label:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
 
 .masthead-form .form-group label {
   color: white;
   font-weight: 300;
+}
+
+.dependencia-div:checked + label .img-snte {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .container-dependencia img {
@@ -674,6 +681,9 @@ input[type="radio"] {
   .navbar-dark .mx-auto {
     margin-left: -22px !important;
   }
+  .navbar-menu {
+    margin-top: 111px;
+  }
   .navbar-dark .form-inline input {
     width: 148px;
   }
@@ -682,6 +692,9 @@ input[type="radio"] {
   }
   .masthead {
     background-position: 75%;
+  }
+  .masthead-form {
+    background-position: 12% 100px;
   }
   .masthead-title {
     font-size: 28px;
@@ -756,5 +769,11 @@ input[type="radio"] {
   .navbar-nav {
     width: 100%;
     text-align: center;
+  }
+  .label-step-4 {
+    font-style: 13px;
+  }
+  .container-dependencia img {
+    height: 40px;
   }
 }
