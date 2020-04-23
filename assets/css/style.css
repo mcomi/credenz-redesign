@@ -544,6 +544,25 @@ select.form-control:focus {
   font-weight: 200;
   line-height: normal;
 }
+.progress-bar-striped {
+  border-radius: 10px;
+  background-image: -moz-linear-gradient(
+    -90deg,
+    rgb(222, 241, 148) 0%,
+    rgb(184, 217, 85) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    -90deg,
+    rgb(222, 241, 148) 0%,
+    rgb(184, 217, 85) 100%
+  );
+  background-image: -ms-linear-gradient(
+    -90deg,
+    rgb(222, 241, 148) 0%,
+    rgb(184, 217, 85) 100%
+  );
+  box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.45);
+}
 
 select.form {
   background: url("../img/icons/down-arrow.png") no-repeat right 0.75rem center,
