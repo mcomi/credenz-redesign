@@ -537,6 +537,7 @@ select.form-control:focus {
   color: white;
   text-align: center;
   font-weight: 200;
+  line-height: normal;
 }
 
 select.form {
