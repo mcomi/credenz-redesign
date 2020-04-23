@@ -531,9 +531,14 @@ select.form-control:focus {
   outline: none;
 }
 
-.input-form,
-.input-form::placeholder {
+.input-form {
   padding: 0.5em 1em 0.5em 1em;
+  color: white;
+  text-align: center;
+  font-weight: 200;
+  line-height: normal;
+}
+.input-form::placeholder {
   color: white;
   text-align: center;
   font-weight: 200;
