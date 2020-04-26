@@ -39,7 +39,9 @@ function moverIcono() {
 $("#celular-check-top").keyup(function () {
   let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
   if (regex.test($(this).val())) {
+    $("#small-spinner").removeClass("hidden");
     setTimeout(function () {
+      $("#small-spinner").addClass("hidden");
       $("#ok-check").removeClass("hidden");
       const toastHtml = `Hemos encontrado tu solicitud <br />
       Espera un momento...`;
@@ -51,8 +53,8 @@ $("#celular-check-top").keyup(function () {
           <span class="btn-link text-white text-underline"> no he recibido mi código por SMS</span></div>`;
         $("#toast-label").html(verificacionHtml);
         $("#ok-check").addClass("hidden");
-      }, 1500);
-    }, 1000);
+      }, 2500);
+    }, 2000);
   }
 });
 
