@@ -761,8 +761,13 @@ input[type="radio"] {
   .navbar-menu {
     margin-top: 111px;
   }
-  .navbar-dark .form-inline input {
-    width: 148px;
+  .navbar-dark .top-input {
+    width: 100px;
+    padding-left: 0px;
+  }
+  .toast-input {
+    width: 20px;
+    margin: 0 1px;
   }
   .logo {
     height: 36px;
