@@ -21,3 +21,57 @@ $("#close-icon").click(function () {
   $("#logo-navbar").css("margin-top", "0");
   $("#menu-navbar").css("margin-top", "76px");
 });
+
+function moverIcono() {
+  var degrees = 0;
+  $(".the-medallion").animate(
+    { deg: degrees + 45 },
+    {
+      duration: 1200,
+      step: function (now) {
+        degrees = degrees + 45;
+        $(this).css({ transform: "rotate(" + degress + "deg)" });
+      },
+    }
+  );
+}
+
+$("#celular-check-top").keyup(function () {
+  let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  if (regex.test($(this).val())) {
+    setTimeout(function () {
+      $("#ok-check").removeClass("hidden");
+      const toastHtml = `Hemos encontrado tu solicitud <br />
+      Espera un momento...`;
+      $("#toast-label").html(toastHtml);
+      setTimeout(function () {
+        $(".toast-input").removeClass("hidden");
+        $("#celular-check-top").addClass("hidden");
+        const verificacionHtml = `<div>Ingresa tu código de verificación <br />
+          <span class="btn-link text-white text-underline"> no he recibido mi código por SMS</span></div>`;
+        $("#toast-label").html(verificacionHtml);
+        $("#ok-check").addClass("hidden");
+      }, 1500);
+    }, 1000);
+  }
+});
+
+// evento para que pase en automatico los numeros del codigo sms
+var indexCodeInput = 0;
+$(".toast-input").bind("keyup", function () {
+  var value = $(this).val();
+  var regex = /^\d+$/;
+  if (regex.test(value)) {
+    if (indexCodeInput < 5) {
+      $(this).next().focus();
+      if (indexCodeInput == 4) {
+        $("#validando-sms").removeClass("hidden");
+        $(".toast-input").addClass("valid");
+        // setTimeout(function () {
+        //   window.location.href = window.location.origin + "/propuesta.html";
+        // }, 2000);
+      }
+    }
+    indexCodeInput++;
+  }
+});
