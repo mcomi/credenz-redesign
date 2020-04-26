@@ -125,3 +125,18 @@ $(".btn-toast-input").bind("keyup", function () {
     indexBtnInput++;
   }
 });
+
+// evento para hacer el scroll lento a las diferentes secciones del menu
+const menuLinks = $("#menu-navbar a");
+
+menuLinks.each(function (index) {
+  let menuItem = $(this);
+  menuItem.click(function (e) {
+    e.preventDefault();
+    let section = this.getAttribute("href");
+    $("html, body").animate(
+      { scrollTop: $(section).offset().top - 100 },
+      "slow"
+    );
+  });
+});
