@@ -88,18 +88,14 @@ $("#estado").on("change", function (e) {
 $("#celular-check-solicitud").keyup(function () {
   let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
   if (regex.test($(this).val())) {
-    $("#small-spinner").removeClass("hidden");
+    $("#btn-cel-icon").addClass("hidden");
+    $("#small-spinner-btn").removeClass("hidden");
     setTimeout(function () {
-      $("#small-spinner").addClass("hidden");
-      $("#ok-check").removeClass("hidden");
-      const toastHtml = `Hemos encontrado tu solicitud <br />
-      Espera un momento...`;
-      $("#toast-label").html(toastHtml);
-      setTimeout(function () {
-        $(".btn-toast-input").removeClass("hidden");
-        $("#celular-check-solicitud").addClass("hidden");
-        $(".btn-toast-input:first").focus();
-      }, 2500);
+      $("#small-spinner-btn").addClass("hidden");
+      $(".fa-commenting-o").removeClass("hidden");
+      $(".btn-toast-input").removeClass("hidden");
+      $("#celular-check-solicitud").addClass("hidden");
+      $(".btn-toast-input:first").focus();
     }, 2000);
   }
 });
@@ -118,7 +114,8 @@ $(".btn-toast-input").bind("keyup", function () {
     if (indexBtnInput < 5) {
       $(this).next().focus();
       if (indexBtnInput == 4) {
-        $("#validando-sms").removeClass("hidden");
+        $("#small-spinner-btn").removeClass("hidden");
+        $(".fa-commenting-o").addClass("hidden");
         $(".toast-input").addClass("valid");
         // setTimeout(function () {
         //   window.location.href = window.location.origin + "/propuesta.html";
