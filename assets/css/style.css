@@ -737,7 +737,9 @@ input[type="radio"] {
 .lds-hourglass.white {
   width: 14px;
   height: 14px;
-  margin: 0;
+  margin: 0 2px 0 -8px;
+}
+.fa-commenting-o {
   margin-left: -7px;
 }
 .lds-hourglass:after {
