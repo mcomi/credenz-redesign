@@ -813,7 +813,7 @@ input[type="radio"] {
     width: 18px;
     font-size: 12px;
     padding: 0;
-    margin: 0 1px;
+    margin: 0 -1px;
   }
   .logo {
     height: 36px;
