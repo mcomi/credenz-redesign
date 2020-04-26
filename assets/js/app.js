@@ -85,57 +85,46 @@ $("#estado").on("change", function (e) {
   window.location.href = window.location.origin + "/propuesta.html";
 });
 
+$("#celular-check-solicitud").keyup(function () {
+  let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
+  if (regex.test($(this).val())) {
+    $("#small-spinner").removeClass("hidden");
+    setTimeout(function () {
+      $("#small-spinner").addClass("hidden");
+      $("#ok-check").removeClass("hidden");
+      const toastHtml = `Hemos encontrado tu solicitud <br />
+      Espera un momento...`;
+      $("#toast-label").html(toastHtml);
+      setTimeout(function () {
+        $(".btn-toast-input").removeClass("hidden");
+        $("#celular-check-solicitud").addClass("hidden");
+        $(".btn-toast-input:first").focus();
+      }, 2500);
+    }, 2000);
+  }
+});
+
 $("#btn-mi-solicitud").click(function () {
-  const inputsHtml = `
-  <input
-  type="tel"
-  class="btn-toast-input"
-  maxlength="1"
-  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-/>
-<input
-  type="tel"
-  class="btn-toast-input"
-  maxlength="1"
-  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-/>
-<input
-  type="tel"
-  class="btn-toast-input"
-  maxlength="1"
-  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-/>
-<input
-  type="tel"
-  class="btn-toast-input"
-  maxlength="1"
-  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-/>
-<input
-  type="tel"
-  class="btn-toast-input"
-  maxlength="1"
-  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
-/>
-  `;
-  $("#btn-mi-solicitud").html(inputsHtml);
+  $("#celular-check-solicitud").removeClass("hidden");
+  $("#ofertas-text").addClass("hidden");
   $("#btn-mi-solicitud").off();
-  var indexBtnInput = 0;
-  $(".btn-toast-input").bind("keyup", function () {
-    var value = $(this).val();
-    var regex = /^\d+$/;
-    if (regex.test(value)) {
-      if (indexBtnInput < 5) {
-        $(this).next().focus();
-        if (indexBtnInput == 4) {
-          $("#validando-sms").removeClass("hidden");
-          $(".toast-input").addClass("valid");
-          // setTimeout(function () {
-          //   window.location.href = window.location.origin + "/propuesta.html";
-          // }, 2000);
-        }
+});
+
+var indexBtnInput = 0;
+$(".btn-toast-input").bind("keyup", function () {
+  var value = $(this).val();
+  var regex = /^\d+$/;
+  if (regex.test(value)) {
+    if (indexBtnInput < 5) {
+      $(this).next().focus();
+      if (indexBtnInput == 4) {
+        $("#validando-sms").removeClass("hidden");
+        $(".toast-input").addClass("valid");
+        // setTimeout(function () {
+        //   window.location.href = window.location.origin + "/propuesta.html";
+        // }, 2000);
       }
-      indexBtnInput++;
     }
-  });
+    indexBtnInput++;
+  }
 });
