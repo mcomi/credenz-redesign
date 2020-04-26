@@ -766,7 +766,9 @@ input[type="radio"] {
     padding-left: 0px;
   }
   .toast-input {
-    width: 20px;
+    width: 22px;
+    font-size: 100%;
+    text-align: left;
     margin: 0 1px;
   }
   .logo {
