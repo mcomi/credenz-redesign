@@ -49,6 +49,7 @@ $("#celular-check-top").keyup(function () {
       setTimeout(function () {
         $(".toast-input").removeClass("hidden");
         $("#celular-check-top").addClass("hidden");
+        $(".toast-input:first").focus();
         const verificacionHtml = `<div>Ingresa tu código de verificación <br />
           <span class="btn-link text-white text-underline"> no he recibido mi código por SMS</span></div>`;
         $("#toast-label").html(verificacionHtml);
@@ -76,4 +77,65 @@ $(".toast-input").bind("keyup", function () {
     }
     indexCodeInput++;
   }
+});
+
+$("#estado").on("change", function (e) {
+  var optionSelected = $("option:selected", this);
+  var valueSelected = this.value;
+  window.location.href = window.location.origin + "/propuesta.html";
+});
+
+$("#btn-mi-solicitud").click(function () {
+  const inputsHtml = `
+  <input
+  type="tel"
+  class="btn-toast-input"
+  maxlength="1"
+  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+/>
+<input
+  type="tel"
+  class="btn-toast-input"
+  maxlength="1"
+  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+/>
+<input
+  type="tel"
+  class="btn-toast-input"
+  maxlength="1"
+  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+/>
+<input
+  type="tel"
+  class="btn-toast-input"
+  maxlength="1"
+  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+/>
+<input
+  type="tel"
+  class="btn-toast-input"
+  maxlength="1"
+  onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+/>
+  `;
+  $("#btn-mi-solicitud").html(inputsHtml);
+  $("#btn-mi-solicitud").off();
+  var indexBtnInput = 0;
+  $(".btn-toast-input").bind("keyup", function () {
+    var value = $(this).val();
+    var regex = /^\d+$/;
+    if (regex.test(value)) {
+      if (indexBtnInput < 5) {
+        $(this).next().focus();
+        if (indexBtnInput == 4) {
+          $("#validando-sms").removeClass("hidden");
+          $(".toast-input").addClass("valid");
+          // setTimeout(function () {
+          //   window.location.href = window.location.origin + "/propuesta.html";
+          // }, 2000);
+        }
+      }
+      indexBtnInput++;
+    }
+  });
 });
