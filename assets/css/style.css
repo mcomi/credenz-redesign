@@ -811,9 +811,9 @@ input[type="radio"] {
   }
   .btn-toast-input {
     width: 18px;
-    font-size: 11px;
+    font-size: 12px;
     padding: 0;
-    margin: 0;
+    margin: 0 1px;
   }
   .logo {
     height: 36px;
