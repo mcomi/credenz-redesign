@@ -20,6 +20,7 @@ $("#close-icon").click(function () {
   $("#top-toast").hide();
   $("#logo-navbar").css("margin-top", "0");
   $("#menu-navbar").css("margin-top", "76px");
+  $(".row-header").css("margin-top", "0");
 });
 
 function moverIcono() {

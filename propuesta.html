@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Credenz - Propuesta</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Top toastr -->
+
+    <div
+      class="navbar navbar-dark bg-dark fixed-top"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+      id="top-toast"
+    >
+      <div class="container">
+        <div class="mx-auto">
+          <form class="form-inline">
+            <label class="text-right my-auto mr-2"
+              >Ingresa tu número <br />
+              celular</label
+            >
+            <input type="text" placeholder="5643535534" />
+            <img src="assets/img/icons/check.png" alt="" class="check-icon" />
+          </form>
+        </div>
+        <div class="justify-content-end">
+          <span class="d-none d-sm-none d-md-inline">Cerrar</span>
+          <img
+            src="assets/img/icons/cancel-white.png"
+            class="close-icon"
+            id="close-icon"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <!-- Navigation -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light shadow fixed-top"
+      id="logo-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="logo" src="assets/img/logo.png" alt="" />
+        </a>
+        <div>
+          <ul class="navbar-nav ml-auto">
+            <button class="btn btn-primary">
+              <img src="assets/img/icons/icon.png" alt="" class="icon-btn" /> Mi
+              solicitud
+            </button>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav
+      class="navbar-menu navbar-expand-lg navbar-light bg-light shadow fixed-top"
+      id="menu-navbar"
+    >
+      <div class="container py-4">
+        <div class="progress">
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            role="progressbar"
+            aria-valuenow="75"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            style="width: 75%;"
+          ></div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    <header class="masthead-form">
+      <div class="container h-100">
+        <div class="row row-header h-100 align-items-center">
+          <div class="col-12 text-center" id="oferta">
+            <div class="oferta-header text-white">
+              <img src="assets/img/check-oferta.png" alt="" />
+              <h3>Dan Deray</h3>
+              <p>Esta es la mejor oferta para ti</p>
+              <div class="money-offer">
+                <span class="money-symbol">$</span> 135,000
+                <small>Crédito máximo autorizado</small>
+              </div>
+            </div>
+            <div class="descuentos d-flex justify-content-center">
+              <div class="descuento-text text-right">
+                <span class="text-white d-block">Tu descuento en</span>
+                <span class="mensualidades-text d-block">60 mensualidades</span>
+                <span class="text-white d-block"
+                  >CAT 30% sin IVA + Taza 32%sin IVA</span
+                >
+              </div>
+              <div class="descuento-amount">
+                <div class="money-discount">
+                  <span class="money-symbol">$</span> 1,560.34
+                </div>
+              </div>
+            </div>
+
+            <button class="btn accept-offer">Aceptar la Oferta</button>
+            <button class="btn btn-link-offer" id="change-offer-btn">
+              Cambiar de oferta
+            </button>
+          </div>
+          <div class="col-12 text-center hidden" id="ofertas">
+            <h3 class="text-white">
+              Te podemos ofrecer
+            </h3>
+            <div class="money-offer text-white pb-3">
+              <span class="money-symbol">$</span> 75,000
+              <small>Selecciona un plan que más te conviene</small>
+            </div>
+            <div class="select-offer d-flex justify-content-center mb-2">
+              <input
+                type="radio"
+                name="oferta"
+                class="radio-btn-offer"
+                id="60"
+              />
+              <div class="white-box">
+                <div class="descuentos d-flex justify-content-center">
+                  <div class="descuento-text text-right">
+                    <span class="text-white d-block">Tu descuento en</span>
+                    <span class="mensualidades-text d-block"
+                      >60 mensualidades</span
+                    >
+                    <span class="text-white d-block"
+                      >CAT 30% sin IVA + Taza 32%sin IVA</span
+                    >
+                  </div>
+                  <div class="descuento-amount">
+                    <div class="money-discount">
+                      <span class="money-symbol">$</span> 1,560.34
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="select-offer d-flex justify-content-center mb-2">
+              <input
+                type="radio"
+                name="oferta"
+                class="radio-btn-offer"
+                id="60"
+              />
+              <div class="white-box">
+                <div class="descuentos d-flex justify-content-center">
+                  <div class="descuento-text text-right">
+                    <span class="text-white d-block">Tu descuento en</span>
+                    <span class="mensualidades-text d-block"
+                      >60 mensualidades</span
+                    >
+                    <span class="text-white d-block"
+                      >CAT 30% sin IVA + Taza 32%sin IVA</span
+                    >
+                  </div>
+                  <div class="descuento-amount">
+                    <div class="money-discount">
+                      <span class="money-symbol">$</span> 1,560.34
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="select-offer d-flex justify-content-center mb-2">
+              <input
+                type="radio"
+                name="oferta"
+                class="radio-btn-offer"
+                id="60"
+              />
+              <div class="white-box">
+                <div class="descuentos d-flex justify-content-center">
+                  <div class="descuento-text text-right">
+                    <span class="text-white d-block">Tu descuento en</span>
+                    <span class="mensualidades-text d-block"
+                      >60 mensualidades</span
+                    >
+                    <span class="text-white d-block"
+                      >CAT 30% sin IVA + Taza 32%sin IVA</span
+                    >
+                  </div>
+                  <div class="descuento-amount">
+                    <div class="money-discount">
+                      <span class="money-symbol">$</span> 1,560.34
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page Content -->
+
+    <footer class="footer pt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-12 logo-container">
+            <img
+              src="assets/img/logo white.png"
+              class="logo img-fluid"
+              alt=""
+            />
+            <p>
+              Fimubac S.A. de C.V., SOFOM, ENR para su constitución y operación,
+              no requiere autorización de la Secretaria de Hacienda y Crédito
+              Público, y no esta sujeta a la Supervisión y Vigilancia de la
+              Comisión Nacional Bancaria y de Valores, únicamente para los
+              efectos del Artículo 56 de la Ley General de Organizaciones y
+              Actividades Auxiliares del Crédito.
+            </p>
+          </div>
+          <div class="col-md-3 col-6">
+            <h5 class="text-center">Servicios</h5>
+            <ul class="nav flex-column pl-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Valores</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Visión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Misión</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"
+                  >Empresa de nómina sólida</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">La filosofía WOW</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Certificación LEED</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Únete a nuestro equipo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html"
+                  >Relación con inversionistas*</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-6">
+            <h5 class="text-center">Soluciones</h5>
+            <ul class="nav flex-column pl-3">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Educación financiera</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inclusión financiera</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Preguntas frecuentes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Afilia a tu empresa</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Aviso de privacidad</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Código de ética</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-12">
+            <h5 class="text-center">Newsletter</h5>
+            <span>
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+            </span>
+            <img src="assets/img/cobertura.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container h-100 text-center">
+          <div class="row h-100">
+            <div class="col-md-5 col-12">
+              <div class="h-100 d-flex align-content-center flex-wrap">
+                © 2015 Derechos Reservados | Fimubac SA de CV SOFOM ENR
+              </div>
+            </div>
+            <div class="col-md-7 col-12">
+              <div class="h-100 d-flex align-content-center flex-wrap">
+                Centro de servicio a clientes ¡Credenz® Wow!: 01 800 030 0029 |
+                servicioaclientes@fimubac.com.mx
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/propuesta.js"></script>
+  </body>
+</html>
