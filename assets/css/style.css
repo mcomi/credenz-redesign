@@ -1123,4 +1123,17 @@ select.form:after {
   .container-dependencia img {
     height: 40px;
   }
+  .money-offer {
+    font-size: 35px;
+  }
+  .money-offer .money-symbol {
+    font-size: 16px;
+    margin-right: -5px;
+  }
+  .descuentos .descuento-amount {
+    font-size: 26px;
+  }
+  .money-dicount {
+    margin-left: 8px;
+  }
 }
