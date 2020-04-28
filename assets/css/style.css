@@ -752,6 +752,10 @@ select.form:after {
   width: 40px;
 }
 
+.code-input-form {
+  width: 40px;
+}
+
 .toggle {
   margin: 0 0 1.5rem;
   box-sizing: border-box;

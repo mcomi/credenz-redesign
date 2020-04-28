@@ -70,3 +70,20 @@ $("#change-offer-btn").click(function () {
   $("#oferta").addClass("hidden");
   $("#ofertas").removeClass("hidden");
 });
+
+var indexCodeInput = 0;
+$(".code-input-form").bind("keyup", function () {
+  var value = $(this).val();
+  var regex = /^\d+$/;
+  if (regex.test(value)) {
+    if (indexCodeInput < 5) {
+      $(this).next().focus();
+      if (indexCodeInput == 4) {
+        $("#validando-sms").removeClass("hidden");
+        $(".code-input-form").addClass("valid");
+        $("#btn-form-next").attr("disabled", false);
+      }
+    }
+    indexCodeInput++;
+  }
+});
