@@ -22,8 +22,14 @@ $("input[name='nomina']").on("click", function (e) {
 });
 
 $("input[name='monto-quincenal']").keyup(function (e) {
-  if ($("input[name='monto-quincenal']").val() !== "")
-    $("#btn-ingreso-next").attr("disabled", false);
+  if ($(this).val() !== "") $("#btn-ingreso-next").attr("disabled", false);
+});
+
+var cleave = new Cleave("input[name='monto-quincenal']", {
+  numeral: true,
+  numeralThousandsGroupStyle: "thousand",
+  prefix: "$",
+  noImmediatePrefix: true,
 });
 
 $(".step-control").on("click", function (e) {
@@ -39,6 +45,10 @@ $("input[name='email']").keyup(function () {
   const regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   if (regex.test($(this).val())) {
     $(this).addClass("valid");
+    $(this).removeClass("invalid");
+  } else {
+    $(this).removeClass("valid");
+    $(this).addClass("invalid");
   }
 });
 
@@ -46,6 +56,13 @@ $("input[name='cellphone']").keyup(function () {
   let regex = /^\(?([0-9]{2})\)?[-. ]?([0-9]{4})[-. ]?([0-9]{4})$/;
   if (regex.test($(this).val())) {
     $(this).addClass("valid");
+    $(this).removeClass("invalid");
+    setTimeout(function () {
+      $("#sms-code").removeClass("hidden");
+    }, 1000);
+  } else {
+    $(this).removeClass("valid");
+    $(this).addClass("invalid");
   }
 });
 

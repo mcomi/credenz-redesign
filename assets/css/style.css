@@ -57,6 +57,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.masthead-cotizador {
+  height: 100vh;
+  padding-top: 100px;
+  min-height: 500px;
+  background-image: url("../img/bg-cotizador.jpg");
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
 .masthead-title {
   font-size: 50px;
 
@@ -578,18 +588,88 @@ select.form-control:focus {
   padding: 0.5em 1em 0.5em 1em;
   color: white;
   text-align: center;
-  font-weight: 200;
+  font-weight: 600;
   line-height: normal;
 }
 .input-form::placeholder {
+  background: transparent;
   color: white;
   text-align: center;
-  font-weight: 200;
+  font-weight: 600;
   line-height: normal;
+}
+
+.input-form::-webkit-input-placeholder {
+  background: transparent;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  line-height: normal;
+}
+.input-form:-moz-placeholder {
+  background: transparent;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  line-height: normal;
+}
+.input-form::-moz-placeholder {
+  background: transparent;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  line-height: normal;
+}
+.input-form:-ms-input-placeholder {
+  background: transparent;
+  color: white;
+  text-align: center;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@-webkit-keyframes autofill {
+  0%,
+  100% {
+    color: #fff;
+    background: transparent;
+  }
+}
+
+.input-form:-webkit-autofill {
+  -webkit-animation-delay: 1s; /* Safari support - any positive time runs instantly */
+  -webkit-animation-name: autofill;
+  -webkit-animation-fill-mode: both;
+}
+
+.input-form ~ img.valid-check {
+  position: absolute;
+  right: 25px;
+  top: 13px;
+  opacity: 0;
 }
 
 .input-form.valid {
   border: 1px solid #6dc72a;
+}
+
+.input-form.valid ~ img.valid-check {
+  opacity: 1;
+}
+
+.input-form ~ img.invalid-check {
+  position: absolute;
+  right: 25px;
+  top: 13px;
+  opacity: 0;
+}
+
+.input-form.invalid {
+  border: 1px solid #ff0000;
+}
+
+.input-form.invalid ~ img.invalid-check {
+  opacity: 1;
 }
 
 .progress-bar-striped {

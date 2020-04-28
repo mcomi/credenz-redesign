@@ -151,3 +151,18 @@ menuLinks.each(function (index) {
     );
   });
 });
+
+// animacion de contadores con libreria countUp.js
+var counterMonto = new CountUp("count-monto", 0, 100000, 0, 3, {
+  useEasing: true,
+  useGrouping: true,
+  separator: ",",
+  decimal: ".",
+  suffix: "",
+  prefix: "$",
+});
+
+$(function () {
+  counterMonto.start();
+  AOS.init();
+});

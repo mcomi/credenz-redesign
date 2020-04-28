@@ -25,6 +25,7 @@
       integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -234,12 +235,12 @@
         <div class="row h-100 align-items-center">
           <div class="col-12 text-center">
             <h1 class="font-weight-light masthead-title">
-              TE OFRECEMOS HASTA $100,000
+              TE OFRECEMOS HASTA <span id="count-monto">$100,000</span>
             </h1>
             <p class="masthead-subtitle">¡ HAZ TU SOLICITUD EN 3min !</p>
             <div class="d-flex">
               <ul class="list-unstyled masthead-list mx-auto text-left">
-                <li>
+                <li data-aos="fade-up-left" data-aos-delay="600">
                   <img
                     src="assets/img/icons/checklist.png"
                     class="mr-2"
@@ -247,7 +248,7 @@
                   />
                   Totalmente gratis
                 </li>
-                <li>
+                <li data-aos="fade-up-left" data-aos-delay="850">
                   <img
                     src="assets/img/icons/checklist.png"
                     class="mr-2"
@@ -255,7 +256,7 @@
                   />
                   Respuesta inmediata
                 </li>
-                <li>
+                <li data-aos="fade-up-left" data-aos-delay="1000">
                   <img
                     src="assets/img/icons/checklist.png"
                     class="mr-2"
@@ -822,6 +823,10 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/vendor/wow.min.js"></script>
+    <script src="assets/js/vendor/jquery.waypoints.min.js"></script>
+    <script src="assets/js/vendor/countUp.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/app.js"></script>
   </body>
 </html>
