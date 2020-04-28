@@ -59,10 +59,6 @@ $("#celular-check-top").keyup(function () {
           <span class="btn-link text-white text-underline"> no he recibido mi código por SMS</span></div>`;
         $("#toast-label").html(verificacionHtml);
         $("#ok-check").addClass("hidden");
-        setTimeout(function () {
-          window.location.href =
-            window.location.origin + "/formulario.html?oferta=" + true;
-        }, 2000);
       }, 2500);
     }, 2000);
   }
@@ -76,9 +72,10 @@ $(".toast-input").bind("keyup", function () {
   if (regex.test(value)) {
     if (indexCodeInput < 5) {
       $(this).next().focus();
-      if (indexCodeInput == 4) {
+      if (indexCodeInput === 4) {
         $("#validando-sms").removeClass("hidden");
         $(".toast-input").addClass("valid");
+        $("#small-spinner").removeClass("hidden");
         setTimeout(function () {
           window.location.href =
             window.location.origin + "/formulario.html?oferta=" + true;
@@ -124,13 +121,14 @@ $(".btn-toast-input").bind("keyup", function () {
   if (regex.test(value)) {
     if (indexBtnInput < 5) {
       $(this).next().focus();
-      if (indexBtnInput == 4) {
+      if (indexBtnInput === 4) {
         $("#small-spinner-btn").removeClass("hidden");
         $(".fa-commenting-o").addClass("hidden");
         $(".toast-input").addClass("valid");
-        // setTimeout(function () {
-        //   window.location.href = window.location.origin + "/propuesta.html";
-        // }, 2000);
+        setTimeout(function () {
+          window.location.href =
+            window.location.origin + "/formulario.html?oferta=" + true;
+        }, 2500);
       }
     }
     indexBtnInput++;

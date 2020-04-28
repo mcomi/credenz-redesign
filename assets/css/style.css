@@ -949,6 +949,33 @@ select.form:after {
   line-height: 1.2;
   text-align: center;
 }
+.testimonial-card .carousel-item.item-cotizador {
+  height: 165px;
+}
+
+.quote-card-cotizador {
+  border: 1px solid #96978f;
+  background-color: rgba(250, 250, 255, 0.412);
+  height: 132px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  padding: 1rem 2rem 1rem 2rem;
+}
+.cotizador {
+  height: 70vh;
+  width: auto;
+  background-image: url("../img/cotizador-rectangle.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.progress-container {
+  background-color: rgb(246, 246, 246) !important;
+}
+
+.icon-congratulate {
+  height: 25px;
+}
 
 @supports (-webkit-appearance: none) or (-moz-appearance: none) {
   .radio-btn-offer {

@@ -87,3 +87,7 @@ $(".code-input-form").bind("keyup", function () {
     indexCodeInput++;
   }
 });
+
+$("#btn-form-next").click(function () {
+  window.location.href = window.location.origin + "/cotizador.html";
+});

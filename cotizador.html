@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Credenz - Propuesta</title>
+    <title>Credenz - Cotizador</title>
 
     <link
       rel="stylesheet"
@@ -31,12 +31,64 @@
       <div class="container">
         <div class="mx-auto">
           <form class="form-inline">
-            <label class="text-right my-auto mr-2"
+            <label id="toast-label" class="text-right my-auto mr-2"
               >Ingresa tu número <br />
               celular</label
             >
-            <input type="text" placeholder="5643535534" />
-            <img src="assets/img/icons/check.png" alt="" class="check-icon" />
+            <img
+              src="assets/img/icons/cel-white.png"
+              class="icon-btn mr-2"
+              alt=""
+            />
+            <input
+              type="tel"
+              placeholder="5643535534"
+              id="celular-check-top"
+              class="top-input"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <img
+              src="assets/img/icons/check.png"
+              id="ok-check"
+              alt=""
+              class="check-icon hidden"
+            />
+            <img
+              src="assets/img/icons/cancel.png"
+              id="wrong-check"
+              alt=""
+              class="check-icon hidden"
+            />
+            <div id="small-spinner" class="lds-hourglass hidden"></div>
           </form>
         </div>
         <div class="justify-content-end">
@@ -63,9 +115,55 @@
         </a>
         <div>
           <ul class="navbar-nav ml-auto">
-            <button class="btn btn-primary">
-              <img src="assets/img/icons/icon.png" alt="" class="icon-btn" /> Mi
-              solicitud
+            <button id="btn-mi-solicitud" class="btn btn-primary">
+              <img
+                src="assets/img/icons/cel-white.png"
+                alt=""
+                class="icon-btn"
+                id="btn-cel-icon"
+              />
+              <div
+                id="small-spinner-btn"
+                class="lds-hourglass white hidden"
+              ></div>
+              <i class="fa fa-commenting-o text-white hidden"></i>
+              <span id="ofertas-text"> Mis ofertas</span>
+              <input
+                type="tel"
+                placeholder="5643535534"
+                id="celular-check-solicitud"
+                class="top-input hidden"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
             </button>
           </ul>
         </div>
@@ -73,10 +171,10 @@
     </nav>
 
     <nav
-      class="navbar-menu navbar-expand-lg navbar-light bg-light shadow fixed-top"
+      class="navbar-menu navbar-expand-lg navbar-light bg-light shadow fixed-top progress-container"
       id="menu-navbar"
     >
-      <div class="container py-4">
+      <div class="container py-2">
         <div class="progress">
           <div
             class="progress-bar progress-bar-striped progress-bar-animated"
@@ -97,13 +195,53 @@
           <div class="col-md-10 col-12 mx-auto">
             <div class="row">
               <div class="col">
-                <div class="cotizador"></div>
+                <div class="cotizador">
+                  <div class="text-center pt-4">
+                    <label for="" class="text-white font-weight-bold d-block"
+                      >1. Tu préstamo</label
+                    >
+                    <input
+                      type="text"
+                      class="input-form"
+                      id="monto-requerido"
+                      value="$17,000"
+                    />
+                    <label for="" class="text-white font-weight-bold d-block"
+                      >2. Periodos</label
+                    >
+                    <select
+                      class="form-control col-md-6 mx-auto form"
+                      name="periodos"
+                    >
+                      <option value="0">96 quincenas</option>
+                      <option value="1">60 quiencenas</option>
+                      <option value="2">48 quincenas</option>
+                    </select>
+                    <label for="" class="text-white font-weight-bold d-block"
+                      >3. Descuento</label
+                    >
+                    <input
+                      type="text"
+                      class="input-form"
+                      id="descuento"
+                      value="$1,649.74"
+                    />
+                  </div>
+                </div>
               </div>
               <div class="col text-center">
+                <img
+                  src="assets/img/icons/clapping.png"
+                  class="icon-congratulate"
+                  alt=""
+                />
                 <h4>¡Felicidades!</h4>
                 <p>Tu préstamo esta pre-autorizado</p>
                 <button class="btn btn-primary">Solicitarlo ahora</button>
-                <div class="card testimonial-card mb-5">
+                <span class="text-center pt-5 d-block">
+                  <small> Miles han recibido su préstamo con Credenz</small>
+                </span>
+                <div class="card testimonial-card mb-2">
                   <div
                     id="carouselExampleControls"
                     class="carousel slide"
@@ -111,19 +249,57 @@
                     data-interval="100000"
                   >
                     <div class="w-100 carousel-inner" role="listbox">
-                      <div class="carousel-item active">
+                      <div class="carousel-item item-cotizador active">
                         <div class="bg"></div>
                         <div class="carousel-caption">
                           <div class="row">
-                            <div class="col-md-10 col-10 quote-card">
+                            <div class="col-md-10 col-10 quote-card-cotizador">
                               <span class="quote-icon left">"</span>
-                              <small
+                              <small class="text-left"
                                 >Me pareció una excelente atención, realmente
                                 les importan sus clientes y los atienden según
                                 sus necesidades. Fue muy rápido y eficiente el
                                 trámite </small
                               ><span class="quote-icon rigth">"</span>
-                              <small class="smallest mute"
+                              <small class="smallest mute text-left"
+                                >- Rosalina Gray</small
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item item-cotizador">
+                        <div class="bg"></div>
+                        <div class="carousel-caption">
+                          <div class="row">
+                            <div class="col-md-10 col-10 quote-card-cotizador">
+                              <span class="quote-icon left">"</span>
+                              <small class="text-left"
+                                >Me pareció una excelente atención, realmente
+                                les importan sus clientes y los atienden según
+                                sus necesidades. Fue muy rápido y eficiente el
+                                trámite </small
+                              ><span class="quote-icon rigth">"</span>
+                              <small class="smallest mute text-left"
+                                >- Rosalina Gray</small
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item item-cotizador">
+                        <div class="bg"></div>
+                        <div class="carousel-caption">
+                          <div class="row">
+                            <div class="col-md-10 col-10 quote-card-cotizador">
+                              <span class="quote-icon left">"</span>
+                              <small class="text-left"
+                                >Me pareció una excelente atención, realmente
+                                les importan sus clientes y los atienden según
+                                sus necesidades. Fue muy rápido y eficiente el
+                                trámite </small
+                              ><span class="quote-icon rigth">"</span>
+                              <small class="smallest mute text-left"
                                 >- Rosalina Gray</small
                               >
                             </div>
@@ -133,7 +309,7 @@
                     </div>
 
                     <a
-                      class="carousel-control-prev"
+                      class="carousel-control-prev mr-2"
                       href="#carouselExampleControls"
                       role="button"
                       data-slide="prev"
@@ -297,6 +473,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="assets/js/app.js"></script>
-    <script src="assets/js/propuesta.js"></script>
+    <script src="assets/js/cotizador.js"></script>
   </body>
 </html>
