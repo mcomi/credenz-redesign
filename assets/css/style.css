@@ -587,6 +587,11 @@ select.form-control:focus {
   font-weight: 200;
   line-height: normal;
 }
+
+.input-form.valid {
+  border: 1px solid #6dc72a;
+}
+
 .progress-bar-striped {
   border-radius: 10px;
   background-image: -moz-linear-gradient(
@@ -634,13 +639,14 @@ select.form:after {
 .container-dependencia {
   margin: 0.5rem;
 }
-.container-dependencia label {
+.dependencia-div ~ label {
   background: transparent;
   border: 1px solid #ffffff;
   border-radius: 10px;
   padding: 0.5rem 1rem;
 }
-.container-dependencia label:hover {
+.dependencia-div + label:hover,
+.dependencia-div:checked + label {
   background: rgba(255, 255, 255, 0.6);
 }
 
@@ -1014,6 +1020,9 @@ select.form:after {
   .navbar-menu {
     margin-top: 111px;
   }
+  .row-header {
+    margin-top: 0;
+  }
   .top-input {
     width: 100px;
     padding-left: 0px;
@@ -1117,7 +1126,7 @@ select.form:after {
     width: 100%;
     text-align: center;
   }
-  .label-step-4 {
+  .label-step-form {
     font-style: 13px;
   }
   .container-dependencia img {

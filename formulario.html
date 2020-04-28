@@ -31,12 +31,64 @@
       <div class="container">
         <div class="mx-auto">
           <form class="form-inline">
-            <label class="text-right my-auto mr-2"
+            <label id="toast-label" class="text-right my-auto mr-2"
               >Ingresa tu número <br />
               celular</label
             >
-            <input type="text" placeholder="5643535534" />
-            <img src="assets/img/icons/check.png" alt="" class="check-icon" />
+            <img
+              src="assets/img/icons/cel-white.png"
+              class="icon-btn mr-2"
+              alt=""
+            />
+            <input
+              type="tel"
+              placeholder="5643535534"
+              id="celular-check-top"
+              class="top-input"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <input
+              type="tel"
+              class="toast-input hidden"
+              maxlength="1"
+              onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+            />
+            <img
+              src="assets/img/icons/check.png"
+              id="ok-check"
+              alt=""
+              class="check-icon hidden"
+            />
+            <img
+              src="assets/img/icons/cancel.png"
+              id="wrong-check"
+              alt=""
+              class="check-icon hidden"
+            />
+            <div id="small-spinner" class="lds-hourglass hidden"></div>
           </form>
         </div>
         <div class="justify-content-end">
@@ -63,9 +115,55 @@
         </a>
         <div>
           <ul class="navbar-nav ml-auto">
-            <button class="btn btn-primary">
-              <img src="assets/img/icons/icon.png" alt="" class="icon-btn" /> Mi
-              solicitud
+            <button id="btn-mi-solicitud" class="btn btn-primary">
+              <img
+                src="assets/img/icons/cel-white.png"
+                alt=""
+                class="icon-btn"
+                id="btn-cel-icon"
+              />
+              <div
+                id="small-spinner-btn"
+                class="lds-hourglass white hidden"
+              ></div>
+              <i class="fa fa-commenting-o text-white hidden"></i>
+              <span id="ofertas-text"> Mis ofertas</span>
+              <input
+                type="tel"
+                placeholder="5643535534"
+                id="celular-check-solicitud"
+                class="top-input hidden"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
+              <input
+                type="tel"
+                class="btn-toast-input hidden"
+                maxlength="1"
+                onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57"
+              />
             </button>
           </ul>
         </div>
@@ -93,12 +191,12 @@
     <!-- Full Page Image Header with Vertically Centered Content -->
     <header class="masthead-form">
       <div class="container h-100">
-        <div class="row h-100 align-items-center">
+        <div class="row row-header h-100 align-items-center">
           <div class="col-12 text-center">
             
-            <div id="step-1">
+            <div id="step-1" class="hidden">
               <div class="form-group">
-                <label for="estado">¿En que dependencia trabajas?</label>
+                <label for="dependencia" class="font-weight-bold">¿En que dependencia trabajas?</label>
               </div>
               <div
                 class="d-flex flex-row bd-highlight mb-3 justify-content-center"
@@ -108,8 +206,8 @@
                     type="radio"
                     name="dependencia"
                     class="dependencia-div"
-                    id="imss"
                     value="imss"
+                    id="imss"
                   />
                   <label for="imss">
                     <img
@@ -123,10 +221,10 @@
                     type="radio"
                     name="dependencia"
                     class="dependencia-div"
-                    id="imss"
-                    value="imss"
+                    value="sep"
+                    id="sep"
                   />
-                  <label for="imss">
+                  <label for="sep">
                     <img src="assets/img/icons/logo-sep.png" alt="" />
                   </label>
                 </div>
@@ -135,10 +233,10 @@
                     type="radio"
                     name="dependencia"
                     class="dependencia-div"
-                    id="imss"
-                    value="imss"
+                    value="tsj"
+                    id="tsj"
                   />
-                  <label for="imss">
+                  <label for="tsj">
                     <img
                       src="assets/img/icons/tsjcdmx-logo-AD7043F894-seeklogo.com.png"
                       alt=""
@@ -150,10 +248,10 @@
                     type="radio"
                     name="dependencia"
                     class="dependencia-div"
-                    id="imss"
-                    value="imss"
+                    value="otro"
+                    id="otro"
                   />
-                  <label for="imss">
+                  <label for="otro">
                     <img
                       src="assets/img/icons/imss-1-logo-png-transparent.png"
                       alt=""
@@ -161,12 +259,11 @@
                   </label>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="dependencia">¿En cuál específicamente?</label>
+              <div class="form-group hidden" id="select-dependencia-especifica">
+                <label for="dependencia-especifica" class="font-weight-bold">¿En cuál específicamente?</label>
                 <select
                   class="form-control col-md-3 mx-auto form"
-                  name="dependencia"
-                  id="dependencia"
+                  name="dependencia-especifica"
                 >
                   <option value="">Selecciona la dependencia</option>
                   <option value="1">Dependencia 1</option>
@@ -175,9 +272,9 @@
                 </select>
               </div>
             </div>
-            <div id="step-2">
+            <div id="step-2" class="hidden">
               <div class="form-group">
-                <label for="">¿De qué forma recibes tu nómina?</label>
+                <label for="" class="font-weight-bold">¿De qué forma recibes tu nómina?</label>
               </div>
               <div
                 class="d-flex flex-row bd-highlight mb-3 justify-content-center"
@@ -200,8 +297,8 @@
                   <label for="mensual">Mensual</label>
                 </div>
               </div>
-              <div class="form-group">
-                <label for=""
+              <div class="form-group hidden" id="monto-ingreso">
+                <label for="" class="font-weight-bold"
                   >¿Cuánto ingreso recibes quincenalmente?
                   <small class="d-block">(Neto después de deducciones)</small>
                 </label>
@@ -210,24 +307,25 @@
                 >
                   <input
                     type="text"
+                    name="monto-quincenal"
                     class="input-form"
                     placeholder="$ 250,000.00 MXN"
                   />
                 </div>
               </div>
               <div class="mt-4">
-                <button href="" class="btn btn-step step-control">
+                <button id="btn-ingreso-next" href="" class="btn btn-step step-control" disabled>
                   Siguiente
                 </button>
               </div>
             </div>
-            <div id="step-3">
+            <div id="step-3" class="hidden">
               <div class="row">
                 <div class="col-md-6 col-12 mx-auto">
                   <div class="row">
                     <div class="col-md-5 col-5">
                       <div class="form-group text-right">
-                        <label for="nombre" class="align-middle label-step-4"
+                        <label for="nombre" class="align-middle label-step-form"
                           >Tu nombre completo</label
                         >
                       </div>
@@ -238,6 +336,7 @@
                           type="text"
                           class="input-form w-100"
                           placeholder="nombre"
+                          name="nombre"
                         />
                       </div>
                     </div>
@@ -245,7 +344,7 @@
                   <div class="row">
                     <div class="col-md-5 col-5">
                       <div class="form-group text-right">
-                        <label class="align-middle label-step-4" for="nombre"
+                        <label class="align-middle label-step-form" for="nombre"
                           >¿A donde te mandamos tu solicitud?</label
                         >
                       </div>
@@ -256,6 +355,7 @@
                           type="mail"
                           class="input-form w-100"
                           placeholder="correo electrónico"
+                          name="email"
                         />
                       </div>
                     </div>
@@ -263,7 +363,7 @@
                   <div class="row">
                     <div class="col-md-5 col-5">
                       <div class="form-group text-right">
-                        <label class="align-middle label-step-4" for="nombre"
+                        <label class="align-middle label-step-form" for="nombre"
                           >Tu celular para notificarte</label
                         >
                       </div>
@@ -274,6 +374,7 @@
                           type="tel"
                           class="input-form w-100"
                           placeholder="5555555555"
+                          name="cellphone"
                         />
                       </div>
                     </div>
@@ -294,6 +395,123 @@
                   <input type="tel" class="code-input" maxlength="1" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
                   <input type="tel" class="code-input" maxlength="1" onkeypress="return event.charCode >= 48 &amp;&amp; event.charCode <= 57">
                   <p id="validando-sms" class="d-none">Estamos validando tu código, espera un momento.</p>
+                </div>
+              </div>
+            </div>
+            <div class="hidden" id="oferta">
+              <div class="oferta-header text-white">
+                <img src="assets/img/check-oferta.png" alt="" />
+                <h3>Dan Deray</h3>
+                <p>Esta es la mejor oferta para ti</p>
+                <div class="money-offer">
+                  <span class="money-symbol">$</span> 135,000
+                  <small>Crédito máximo autorizado</small>
+                </div>
+              </div>
+              <div class="descuentos d-flex justify-content-center">
+                <div class="descuento-text text-right">
+                  <span class="text-white d-block">Tu descuento en</span>
+                  <span class="mensualidades-text d-block">60 mensualidades</span>
+                  <span class="text-white d-block"
+                    >CAT 30% sin IVA + Taza 32%sin IVA</span
+                  >
+                </div>
+                <div class="descuento-amount">
+                  <div class="money-discount">
+                    <span class="money-symbol">$</span> 1,560.34
+                  </div>
+                </div>
+              </div>
+  
+              <button class="btn accept-offer">Aceptar la Oferta</button>
+              <button class="btn btn-link-offer" id="change-offer-btn">
+                Cambiar de oferta
+              </button>
+            </div>
+            <div class="hidden" id="ofertas">
+              <h3 class="text-white">
+                Te podemos ofrecer
+              </h3>
+              <div class="money-offer text-white pb-3">
+                <span class="money-symbol">$</span> 75,000
+                <small>Selecciona un plan que más te conviene</small>
+              </div>
+              <div class="select-offer d-flex justify-content-center mb-2">
+                <input
+                  type="radio"
+                  name="oferta"
+                  class="radio-btn-offer"
+                  id="60"
+                />
+                <div class="white-box">
+                  <div class="descuentos d-flex justify-content-center">
+                    <div class="descuento-text text-right">
+                      <span class="text-white d-block">Tu descuento en</span>
+                      <span class="mensualidades-text d-block"
+                        >60 mensualidades</span
+                      >
+                      <span class="text-white d-block"
+                        >CAT 30% sin IVA + Taza 32%sin IVA</span
+                      >
+                    </div>
+                    <div class="descuento-amount">
+                      <div class="money-discount">
+                        <span class="money-symbol">$</span> 1,560.34
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="select-offer d-flex justify-content-center mb-2">
+                <input
+                  type="radio"
+                  name="oferta"
+                  class="radio-btn-offer"
+                  id="60"
+                />
+                <div class="white-box">
+                  <div class="descuentos d-flex justify-content-center">
+                    <div class="descuento-text text-right">
+                      <span class="text-white d-block">Tu descuento en</span>
+                      <span class="mensualidades-text d-block"
+                        >60 mensualidades</span
+                      >
+                      <span class="text-white d-block"
+                        >CAT 30% sin IVA + Taza 32%sin IVA</span
+                      >
+                    </div>
+                    <div class="descuento-amount">
+                      <div class="money-discount">
+                        <span class="money-symbol">$</span> 1,560.34
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="select-offer d-flex justify-content-center mb-2">
+                <input
+                  type="radio"
+                  name="oferta"
+                  class="radio-btn-offer"
+                  id="60"
+                />
+                <div class="white-box">
+                  <div class="descuentos d-flex justify-content-center">
+                    <div class="descuento-text text-right">
+                      <span class="text-white d-block">Tu descuento en</span>
+                      <span class="mensualidades-text d-block"
+                        >60 mensualidades</span
+                      >
+                      <span class="text-white d-block"
+                        >CAT 30% sin IVA + Taza 32%sin IVA</span
+                      >
+                    </div>
+                    <div class="descuento-amount">
+                      <div class="money-discount">
+                        <span class="money-symbol">$</span> 1,560.34
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

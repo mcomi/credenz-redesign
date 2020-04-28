@@ -19,7 +19,11 @@ $(".collapse").on("hide.bs.collapse", function () {
 $("#close-icon").click(function () {
   $("#top-toast").hide();
   $("#logo-navbar").css("margin-top", "0");
-  $("#menu-navbar").css("margin-top", "76px");
+  const heightTopBar = $("#top-toast").css("height");
+  const marginTopMenuBar = $("#menu-navbar").css("margin-top");
+  const newMargin = parseInt(marginTopMenuBar) - parseInt(heightTopBar);
+  console.log(newMargin);
+  $("#menu-navbar").css("margin-top", newMargin + "px");
   $(".row-header").css("margin-top", "0");
 });
 
@@ -55,6 +59,10 @@ $("#celular-check-top").keyup(function () {
           <span class="btn-link text-white text-underline"> no he recibido mi código por SMS</span></div>`;
         $("#toast-label").html(verificacionHtml);
         $("#ok-check").addClass("hidden");
+        setTimeout(function () {
+          window.location.href =
+            window.location.origin + "/formulario.html?oferta=" + true;
+        }, 2000);
       }, 2500);
     }, 2000);
   }
@@ -71,9 +79,10 @@ $(".toast-input").bind("keyup", function () {
       if (indexCodeInput == 4) {
         $("#validando-sms").removeClass("hidden");
         $(".toast-input").addClass("valid");
-        // setTimeout(function () {
-        //   window.location.href = window.location.origin + "/propuesta.html";
-        // }, 2000);
+        setTimeout(function () {
+          window.location.href =
+            window.location.origin + "/formulario.html?oferta=" + true;
+        }, 2000);
       }
     }
     indexCodeInput++;
@@ -83,7 +92,8 @@ $(".toast-input").bind("keyup", function () {
 $("#estado").on("change", function (e) {
   var optionSelected = $("option:selected", this);
   var valueSelected = this.value;
-  window.location.href = window.location.origin + "/propuesta.html";
+  window.location.href =
+    window.location.origin + "/formulario.html?oferta=" + false;
 });
 
 $("#celular-check-solicitud").keyup(function () {
