@@ -32,8 +32,8 @@
         <div class="mx-auto">
           <form class="form-inline">
             <label id="toast-label" class="text-right my-auto mr-2"
-              >Ingresa tu número <br />
-              celular</label
+              >Continua con tu<br />
+              solicitud en proceso</label
             >
             <img
               src="assets/img/icons/cel-white.png"
@@ -127,7 +127,7 @@
                 class="lds-hourglass white hidden"
               ></div>
               <i class="fa fa-commenting-o text-white hidden"></i>
-              <span id="ofertas-text"> Mis ofertas</span>
+              <span id="ofertas-text"> ¿Eres cliente?</span>
               <input
                 type="tel"
                 placeholder="5643535534"
@@ -202,20 +202,39 @@
                     >
                     <input
                       type="text"
-                      class="input-form"
-                      id="monto-requerido"
-                      value="$17,000"
+                      class="input-form mb-3"
+                      name="monto-requerido"
+                      placeholder="$17,000"
                     />
+                    <div clsas="mb-3">
+                      <div class="sliderWrap">
+                        <div class="slider-inner-wrapper">
+                          <input
+                            id="slider-loan-amount"
+                            min="1000"
+                            value="17000"
+                            max="50000"
+                            default_amount="17000"
+                            step="1000"
+                            type="range"
+                          />
+                          <div class="range">
+                            <small class="min float-left">$0</small>
+                            <small class="max float-right">$50,000</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <label for="" class="text-white font-weight-bold d-block"
                       >2. Periodos</label
                     >
                     <select
-                      class="form-control col-md-6 mx-auto form"
+                      class="form-control col-md-6 mx-auto form mb-3"
                       name="periodos"
                     >
-                      <option value="0">96 quincenas</option>
-                      <option value="1">60 quiencenas</option>
-                      <option value="2">48 quincenas</option>
+                      <option value="96" selected>96 quincenas</option>
+                      <option value="60">60 quiencenas</option>
+                      <option value="48">48 quincenas</option>
                     </select>
                     <label for="" class="text-white font-weight-bold d-block"
                       >3. Descuento</label
@@ -223,8 +242,8 @@
                     <input
                       type="text"
                       class="input-form"
-                      id="descuento"
-                      value="$1,649.74"
+                      name="descuento"
+                      placeholder="$1,649.74"
                     />
                   </div>
                 </div>
@@ -253,7 +272,7 @@
                         <div class="bg"></div>
                         <div class="carousel-caption">
                           <div class="row">
-                            <div class="col-md-10 col-10 quote-card-cotizador">
+                            <div class="col-md-10 col-12 quote-card-cotizador">
                               <span class="quote-icon left">"</span>
                               <small class="text-left"
                                 >Me pareció una excelente atención, realmente
@@ -458,8 +477,8 @@
       </div>
     </footer>
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
       crossorigin="anonymous"
     ></script>
     <script
@@ -472,6 +491,10 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/vendor/countUp.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/vendor/cleave.min.js"></script>
+    <script src="assets/js/vendor/rangeslider.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/cotizador.js"></script>
   </body>
