@@ -35,13 +35,13 @@ var cleave = new Cleave("input[name='monto-quincenal']", {
 $(".step-control").on("click", function (e) {
   $("#step-2").addClass("hidden");
   $("#step-3").removeClass("hidden");
-  $("header").removeClass("masthead-form").addClass("masthead-cotizador");
+  $("header").addClass("masthead-cotizador");
 });
 
 $("#btn-take-offer").click(function () {
   $("#step-3").addClass("hidden");
   $("#step-4").removeClass("hidden");
-  $("header").removeClass("masthead-cotizador").addClass("masthead-form");
+  $("header").removeClass("masthead-cotizador");
 });
 
 $("input[name='nombre']").keyup(function () {

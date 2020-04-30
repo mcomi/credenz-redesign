@@ -82,13 +82,7 @@ body {
 }
 
 .masthead-cotizador {
-  height: 100vh;
   padding-top: 80px;
-  min-height: 100vh;
-  background-image: url("../img/rocket-child.jpg");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
 }
 
 .masthead-title {
@@ -1029,8 +1023,9 @@ select.form:after {
 }
 
 .quote-card-cotizador {
-  border: 1px solid #96978f;
-  background-color: rgba(250, 250, 255, 0.412);
+  border: none;
+  background-color: rgba(0, 0, 0, 0.412);
+  color: #fff;
   height: 132px;
   margin-left: 1rem;
   margin-top: 1rem;
