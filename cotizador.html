@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -110,6 +116,10 @@
         </a>
         <div>
           <ul class="navbar-nav ml-auto">
+            <div class="sms-legend hidden">
+              Ingresa tu código de verificación <br />
+              <a href="#" class="btn-link"> no he recibido mi código por SMS</a>
+            </div>
             <button id="btn-mi-solicitud" class="btn btn-primary">
               <img
                 src="assets/img/icons/cel-white.png"
@@ -125,7 +135,7 @@
               <span id="ofertas-text"> ¿Ya eres cliente?</span>
               <input
                 type="tel"
-                placeholder="5643535534"
+                placeholder="ingresa tu celular"
                 id="celular-check-solicitud"
                 class="top-input hidden"
               />
@@ -251,7 +261,9 @@
                 />
                 <h4>¡Felicidades!</h4>
                 <p>Tu préstamo esta pre-autorizado</p>
-                <button class="btn btn-primary">Solicitarlo ahora</button>
+                <button class="btn btn-primary" id="btn-take-offer">
+                  Solicitarlo ahora
+                </button>
                 <span class="text-center pt-5 d-block">
                   <small> Miles han recibido su préstamo con Credenz</small>
                 </span>
@@ -444,10 +456,24 @@
           </div>
           <div class="col-md-3 col-12">
             <h5 class="text-center">Newsletter</h5>
-            <span>
-              <i class="fa fa-facebook"></i>
-              <i class="fa fa-twitter"></i>
-              <i class="fa fa-linkedin"></i>
+            <span class="social">
+              <ul>
+                <li class="icon-social">
+                  <a href="">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="icon-social">
+                  <a href="">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="icon-social">
+                  <a href="">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
             </span>
             <img src="assets/img/cobertura.png" alt="" class="img-fluid" />
           </div>

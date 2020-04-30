@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha256-NuCn4IvuZXdBaFKJOAcsU2Q3ZpwbdFisd5dux4jkQ5w="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -110,6 +116,10 @@
         </a>
         <div>
           <ul class="navbar-nav ml-auto">
+            <div class="sms-legend hidden d-block d-sm-block d-md-none">
+              Ingresa tu código de verificación <br />
+              <a href="#" class="btn-link"> no he recibido mi código por SMS</a>
+            </div>
             <button id="btn-mi-solicitud" class="btn btn-primary">
               <img
                 src="assets/img/icons/cel-white.png"
@@ -125,7 +135,7 @@
               <span id="ofertas-text"> ¿Ya eres cliente? </span>
               <input
                 type="tel"
-                placeholder="5643535534"
+                placeholder="ingresa tu celular"
                 id="celular-check-solicitud"
                 class="top-input hidden"
               />
@@ -324,7 +334,196 @@
                 </button>
               </div>
             </div>
-            <div id="step-3" class="hidden">
+            <div id="step-3" class="row hidden">
+              <div class="col-md-10 col-12 mx-auto">
+                <div class="row">
+                  <div class="col">
+                    <div class="cotizador">
+                      <div class="text-center pt-4">
+                        <label
+                          for=""
+                          class="text-white font-weight-bold d-block"
+                          >1. Tu préstamo</label
+                        >
+                        <input
+                          type="text"
+                          class="input-form mb-3"
+                          name="monto-requerido"
+                          placeholder="$17,000"
+                        />
+                        <div clsas="mb-3">
+                          <div class="sliderWrap">
+                            <div class="slider-inner-wrapper">
+                              <input
+                                id="slider-loan-amount"
+                                min="1000"
+                                value="17000"
+                                max="50000"
+                                default_amount="17000"
+                                step="1000"
+                                type="range"
+                              />
+                              <div class="range">
+                                <small class="min float-left">$0</small>
+                                <small class="max float-right">$50,000</small>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <label
+                          for=""
+                          class="text-white font-weight-bold d-block"
+                          >2. Periodos</label
+                        >
+                        <select
+                          class="form-control col-md-6 mx-auto form mb-3"
+                          name="periodos"
+                        >
+                          <option value="96" selected>96 quincenas</option>
+                          <option value="60">60 quiencenas</option>
+                          <option value="48">48 quincenas</option>
+                        </select>
+                        <label
+                          for=""
+                          class="text-white font-weight-bold d-block"
+                          >3. Descuento</label
+                        >
+                        <input
+                          type="text"
+                          class="input-form"
+                          name="descuento"
+                          placeholder="$1,649.74"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col text-center">
+                    <img
+                      src="assets/img/icons/clapping.png"
+                      class="icon-congratulate"
+                      alt=""
+                    />
+                    <h4>¡Felicidades!</h4>
+                    <p>Tu préstamo esta pre-autorizado</p>
+                    <button class="btn btn-primary" id="btn-take-offer">
+                      Solicitarlo ahora
+                    </button>
+                    <span class="text-center pt-5 d-block">
+                      <small> Miles han recibido su préstamo con Credenz</small>
+                    </span>
+                    <div class="card testimonial-card mb-2">
+                      <div
+                        id="carouselExampleControls"
+                        class="carousel slide"
+                        data-ride="carousel"
+                        data-interval="100000"
+                      >
+                        <div class="w-100 carousel-inner" role="listbox">
+                          <div class="carousel-item item-cotizador active">
+                            <div class="bg"></div>
+                            <div class="carousel-caption">
+                              <div class="row">
+                                <div
+                                  class="col-md-10 col-12 quote-card-cotizador"
+                                >
+                                  <span class="quote-icon left">"</span>
+                                  <small class="text-left"
+                                    >Me pareció una excelente atención,
+                                    realmente les importan sus clientes y los
+                                    atienden según sus necesidades. Fue muy
+                                    rápido y eficiente el trámite </small
+                                  ><span class="quote-icon rigth">"</span>
+                                  <small class="smallest mute text-left"
+                                    >- Rosalina Gray</small
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item item-cotizador">
+                            <div class="bg"></div>
+                            <div class="carousel-caption">
+                              <div class="row">
+                                <div
+                                  class="col-md-10 col-12 quote-card-cotizador"
+                                >
+                                  <span class="quote-icon left">"</span>
+                                  <small class="text-left"
+                                    >Me pareció una excelente atención,
+                                    realmente les importan sus clientes y los
+                                    atienden según sus necesidades. Fue muy
+                                    rápido y eficiente el trámite </small
+                                  ><span class="quote-icon rigth">"</span>
+                                  <small class="smallest mute text-left"
+                                    >- Rosalina Gray</small
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="carousel-item item-cotizador">
+                            <div class="bg"></div>
+                            <div class="carousel-caption">
+                              <div class="row">
+                                <div
+                                  class="col-md-10 col-12 quote-card-cotizador"
+                                >
+                                  <span class="quote-icon left">"</span>
+                                  <small class="text-left"
+                                    >Me pareció una excelente atención,
+                                    realmente les importan sus clientes y los
+                                    atienden según sus necesidades. Fue muy
+                                    rápido y eficiente el trámite </small
+                                  ><span class="quote-icon rigth">"</span>
+                                  <small class="smallest mute text-left"
+                                    >- Rosalina Gray</small
+                                  >
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <a
+                          class="carousel-control-prev mr-2"
+                          href="#carouselExampleControls"
+                          role="button"
+                          data-slide="prev"
+                        >
+                          <span
+                            class="carousel-control-prev-icon"
+                            aria-hidden="true"
+                          >
+                            <img
+                              src="assets/img/icons/Icon-Left-Arrow.png"
+                              alt=""
+                          /></span>
+                          <span class="sr-only">Previous</span>
+                        </a>
+                        <a
+                          class="carousel-control-next"
+                          href="#carouselExampleControls"
+                          role="button"
+                          data-slide="next"
+                        >
+                          <span
+                            class="carousel-control-next-icon"
+                            aria-hidden="true"
+                          >
+                            <img
+                              src="assets/img/icons/Icon-Right-Arrow.png"
+                              alt=""
+                          /></span>
+
+                          <span class="sr-only">Next</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="step-4" class="hidden">
               <div class="row">
                 <div class="col-md-6 col-12 mx-auto">
                   <div class="row">
@@ -475,7 +674,7 @@
                 <button
                   id="btn-form-next"
                   href=""
-                  class="btn btn-step step-control mt-3"
+                  class="btn btn-step mt-3"
                   disabled
                 >
                   Continuar
@@ -542,7 +741,33 @@
                     </div>
                     <div class="descuento-amount">
                       <div class="money-discount">
-                        <span class="money-symbol">$</span> 1,560.34
+                        <span class="money-symbol">$</span> 3,560.34
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="select-offer d-flex justify-content-center mb-2">
+                <input
+                  type="radio"
+                  name="oferta"
+                  class="radio-btn-offer"
+                  id="60"
+                />
+                <div class="white-box">
+                  <div class="descuentos d-flex justify-content-center">
+                    <div class="descuento-text text-right">
+                      <span class="text-white d-block">Tu descuento en</span>
+                      <span class="mensualidades-text d-block"
+                        >60 mensualidades</span
+                      >
+                      <span class="text-white d-block"
+                        >CAT 30% sin IVA + Taza 32% sin IVA</span
+                      >
+                    </div>
+                    <div class="descuento-amount">
+                      <div class="money-discount">
+                        <span class="money-symbol">$</span> 2,560.34
                       </div>
                     </div>
                   </div>
@@ -574,31 +799,10 @@
                   </div>
                 </div>
               </div>
-              <div class="select-offer d-flex justify-content-center mb-2">
-                <input
-                  type="radio"
-                  name="oferta"
-                  class="radio-btn-offer"
-                  id="60"
-                />
-                <div class="white-box">
-                  <div class="descuentos d-flex justify-content-center">
-                    <div class="descuento-text text-right">
-                      <span class="text-white d-block">Tu descuento en</span>
-                      <span class="mensualidades-text d-block"
-                        >60 mensualidades</span
-                      >
-                      <span class="text-white d-block"
-                        >CAT 30% sin IVA + Taza 32% sin IVA</span
-                      >
-                    </div>
-                    <div class="descuento-amount">
-                      <div class="money-discount">
-                        <span class="money-symbol">$</span> 1,560.34
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="mt-4">
+                <button href="" class="btn btn-step step-control">
+                  Seleccionar esta oferta
+                </button>
               </div>
             </div>
           </div>
@@ -690,10 +894,24 @@
           </div>
           <div class="col-md-3 col-12">
             <h5 class="text-center">Newsletter</h5>
-            <span>
-              <i class="fa fa-facebook"></i>
-              <i class="fa fa-twitter"></i>
-              <i class="fa fa-linkedin"></i>
+            <span class="social">
+              <ul>
+                <li class="icon-social">
+                  <a href="">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li class="icon-social">
+                  <a href="">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                </li>
+                <li class="icon-social">
+                  <a href="">
+                    <i class="fa fa-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
             </span>
             <img src="assets/img/cobertura.png" alt="" class="img-fluid" />
           </div>
@@ -737,6 +955,7 @@
     <script src="assets/js/vendor/countUp.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="assets/js/vendor/cleave.min.js"></script>
+    <script src="assets/js/vendor/rangeslider.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/form.js"></script>
   </body>

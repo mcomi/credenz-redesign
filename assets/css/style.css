@@ -16,7 +16,7 @@ body {
 }
 
 .row-header {
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .navbar-dark label span {
@@ -42,6 +42,22 @@ body {
 .btn-toast-input.valid,
 .toast-input.valid {
   border: 1px solid #6dc72a;
+}
+
+.toast-input.invalid {
+  border: 1px solid #ff0000;
+}
+
+.sms-legend {
+  font-size: 12px;
+  text-align: right;
+  margin: auto 5px;
+  line-height: 14px;
+}
+.sms-legend a {
+  color: #333;
+  font-size: 11px;
+  text-decoration: underline;
 }
 
 .masthead {
@@ -572,6 +588,57 @@ a {
   line-height: 2.667;
   text-align: center;
 }
+
+.social {
+  text-align: left;
+}
+
+.social ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.social ul li.icon-social {
+  text-align: center;
+  display: inline-block;
+  zoom: 1;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #989898;
+  background-color: transparent;
+  border-radius: 35px;
+  *display: inline;
+  vertical-align: middle;
+}
+.social ul li.icon-social:hover {
+  background-color: #f16192;
+  border: 1px solid #f16192;
+}
+.social ul li a {
+  display: block;
+  font-size: 0.9em;
+  line-height: 2.2em;
+  text-decoration: none;
+}
+
+.social ul li.icon-social a i {
+  color: #989898;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+.social ul li.icon-social:hover a i {
+  color: #fff;
+}
+.social ul li.icon-social:focus a i,
+.social ul li.icon-social:active a i {
+  transition: none;
+  color: #ffffff;
+}
+
 .input-form,
 select.form-control,
 select.form-control:focus {
