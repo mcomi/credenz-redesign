@@ -179,3 +179,8 @@ function updateProgressBar(percent) {
     .attr("aria-valuenow", percent);
   $(".progress-completed").text(percent + "%");
 }
+
+$(".radio-btn-offer").click(function () {
+  $(".white-box").removeClass("active");
+  $(this).siblings(".white-box").addClass("active");
+});

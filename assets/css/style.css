@@ -1093,6 +1093,20 @@ select.form:after {
   width: fit-content;
 }
 
+.white-box:hover,
+.white-box.active {
+  border: 1px solid #ffffff;
+  color: white !important;
+  background-color: #6dc82b;
+}
+
+.white-box:hover .mensualidades-text,
+.white-box:hover .descuento-amount,
+.white-box.active .mensualidades-text,
+.white-box.active .descuento-amount {
+  color: white !important;
+}
+
 .white-box .descuentos {
   margin: 0.5rem 1rem;
 }
