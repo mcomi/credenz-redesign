@@ -9,12 +9,12 @@ $("input[name='dependencia']").on("change", function (e) {
   $("#select-dependencia-especifica").removeClass("hidden");
 });
 
-$("select[name='dependencia-especifica']").on("change", function (e) {
-  var optionSelected = $("option:selected", this);
-  var valueSelected = this.value;
-  console.log(valueSelected);
+$(".dropdown-item-dependencia").click(function (e) {
+  var optionSelected = $(this).data("dependencia");
+  console.log(optionSelected);
   $("#step-1").addClass("hidden");
   $("#step-2").removeClass("hidden");
+  updateProgressBar(25);
 });
 
 $("input[name='nomina']").on("click", function (e) {
@@ -33,6 +33,7 @@ var cleave = new Cleave("input[name='monto-quincenal']", {
 });
 
 $(".step-control").on("click", function (e) {
+  updateProgressBar(50);
   $("#step-2").addClass("hidden");
   $("#step-3").removeClass("hidden");
   $("header").addClass("masthead-cotizador");
@@ -42,6 +43,12 @@ $("#btn-take-offer").click(function () {
   $("#step-3").addClass("hidden");
   $("#step-4").removeClass("hidden");
   $("header").removeClass("masthead-cotizador");
+  updateProgressBar(75);
+  setTimeout(function () {
+    $('[data-toggle="popover"]').popover("show", {
+      html: true,
+    });
+  }, 1000);
 });
 
 $("input[name='nombre']").keyup(function () {
@@ -162,3 +169,11 @@ $(document).ready(function () {
 });
 
 $("select[name='periodos']").change(actualizaMontoYDescuento);
+
+//progress bar
+function updateProgressBar(percent) {
+  $(".progress-bar")
+    .css("width", percent + "%")
+    .attr("aria-valuenow", percent);
+  $(".progress-completed").text(percent + "%");
+}

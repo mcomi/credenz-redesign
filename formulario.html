@@ -6,7 +6,12 @@
 
     <title>Credenz - Formulario</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
       rel="stylesheet"
@@ -184,11 +189,19 @@
           <div
             class="progress-bar progress-bar-striped progress-bar-animated"
             role="progressbar"
-            aria-valuenow="75"
+            aria-valuenow="0"
             aria-valuemin="0"
             aria-valuemax="100"
-            style="width: 75%;"
-          ></div>
+            style="width: 0%;"
+          >
+            <span
+              class="progress-completed"
+              data-toggle="popover"
+              data-placement="top"
+              data-content="Almost done"
+              >0%</span
+            >
+          </div>
         </div>
       </div>
     </nav>
@@ -269,15 +282,41 @@
                 <label for="dependencia-especifica" class="font-weight-bold"
                   >¿En cuál específicamente?</label
                 >
-                <select
-                  class="form-control col-md-3 mx-auto form"
-                  name="dependencia-especifica"
-                >
-                  <option value="">Selecciona la dependencia</option>
-                  <option value="1">Dependencia 1</option>
-                  <option value="2">Dependencia 2</option>
-                  <option value="3">Dependencia 3</option>
-                </select>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary dropdown-toggle"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Selecciona la dependencia
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <button
+                      class="dropdown-item dropdown-item-dependencia"
+                      data-dependencia="1"
+                    >
+                      Dependencia 1
+                    </button>
+                    <button
+                      class="dropdown-item dropdown-item-dependencia"
+                      data-dependencia="1"
+                    >
+                      Dependencia 2
+                    </button>
+                    <button
+                      class="dropdown-item dropdown-item-dependencia"
+                      data-dependencia="1"
+                    >
+                      Dependencia 3
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
             <div id="step-2" class="hidden">

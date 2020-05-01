@@ -131,9 +131,9 @@ $(".toast-input").bind("keyup", function () {
   }
 });
 
-$("#estado").on("change", function (e) {
-  var optionSelected = $("option:selected", this);
-  var valueSelected = this.value;
+$(".dropdown-item-estado").click(function (e) {
+  var optionSelected = $(this).data("estado");
+  console.log(optionSelected);
   window.location.href =
     window.location.origin + "/formulario.html?oferta=" + false;
 });
@@ -153,6 +153,8 @@ $("#celular-check-solicitud").keyup(function () {
     }, 2000);
   }
 });
+
+$(".dropdown-toggle").dropdown();
 
 $("#btn-mi-solicitud").click(function () {
   $("#celular-check-solicitud").removeClass("hidden");

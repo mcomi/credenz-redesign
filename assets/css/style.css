@@ -634,6 +634,48 @@ a {
 }
 
 .input-form,
+.dropdown-toggle,
+.dropdown-toggle:hover,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle,
+.dropdown-menu,
+.btn-secondary:focus,
+.btn.dropdown-toggle,
+.btn-secondary.dropdown-toggle:not(:disabled):not(.disabled):active:focus {
+  /* styling */
+  box-shadow: none;
+  background-color: transparent;
+  border: thin solid white;
+  border-radius: 4px;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  color: white;
+  outline: none;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-item {
+  color: #ffffff;
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover,
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #75bbac;
+  background-color: #ffffff;
+}
 select.form-control,
 select.form-control:focus {
   /* styling */
@@ -651,6 +693,30 @@ select.form-control:focus {
   -moz-appearance: none;
   color: white;
   outline: none;
+}
+
+select.form {
+  background: url("../img/icons/down-arrow.png") no-repeat right 0.75rem center,
+    linear-gradient(to right, #fff, #fff) no-repeat right 2rem center;
+  /* background-position: calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px), 100% 0; */
+  background-size: 12px, 1px;
+  color: white;
+}
+
+.dropdown-menu-estado {
+  transform: translate3d(443px, 42px, 0px) !important;
+}
+
+select.form:after {
+  border-left: 1px solid #fff;
+  content: "\00a0";
+  position: absolute;
+  top: 0;
+  right: 46px;
+  z-index: 2;
+  display: block;
+  height: 38px;
 }
 
 .input-form {
@@ -761,24 +827,50 @@ select.form-control:focus {
   box-shadow: inset 0px 2px 0px 0px rgba(255, 255, 255, 0.45);
 }
 
-select.form {
+.progress-completed {
+  color: #333;
+}
+
+.popover {
+  max-width: 100px;
+  border: 1px solid rgb(130, 157, 55);
+  border-radius: 10px;
+  background-image: -moz-linear-gradient(
+    90deg,
+    rgb(116, 154, 12) 0%,
+    rgb(168, 211, 36) 100%
+  );
+  background-image: -webkit-linear-gradient(
+    90deg,
+    rgb(116, 154, 12) 0%,
+    rgb(168, 211, 36) 100%
+  );
+  background-image: -ms-linear-gradient(
+    90deg,
+    rgb(116, 154, 12) 0%,
+    rgb(168, 211, 36) 100%
+  );
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    inset 0px 2px 0px 0px rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+}
+
+.popover .popover-body {
+  color: #fff;
+  line-height: 1.1rem;
+  text-align: center;
+}
+.bs-popover-top > .arrow::after {
+  border-top-color: rgb(116, 154, 12);
+}
+
+.dropdown-toggle {
   background: url("../img/icons/down-arrow.png") no-repeat right 0.75rem center,
     linear-gradient(to right, #fff, #fff) no-repeat right 2rem center;
   /* background-position: calc(100% - 20px) calc(1em + 2px),
     calc(100% - 15px) calc(1em + 2px), 100% 0; */
   background-size: 12px, 1px;
   color: white;
-}
-
-select.form:after {
-  border-left: 1px solid #fff;
-  content: "\00a0";
-  position: absolute;
-  top: 0;
-  right: 46px;
-  z-index: 2;
-  display: block;
-  height: 38px;
 }
 
 .dependencia-div {
