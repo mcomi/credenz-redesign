@@ -63,7 +63,7 @@ $("#celular-check-top").keyup(function () {
     if ($(this).val() === "1111111111") {
       $("#small-spinner").addClass("hidden");
       $("#wrong-check").removeClass("hidden");
-      const toastHtml = `Hemos encontrado solicitud <br />
+      const toastHtml = `No hemos encontrado solicitud <br />
       con este número`;
       $("#toast-label").html(toastHtml);
       $("#toast-label").addClass("text-danger");
@@ -199,7 +199,7 @@ menuLinks.each(function (index) {
 });
 
 // animacion de contadores con libreria countUp.js
-var counterMonto = new CountUp("count-monto", 0, 100000, 0, 3, {
+var counterMonto = new CountUp("count-monto", 0, 130000, 0, 3, {
   useEasing: true,
   useGrouping: true,
   separator: ",",
