@@ -11,6 +11,8 @@ if (
   isMobile = true;
 }
 
+$(".dropdown-toggle-estado").dropdown();
+
 $(".collapse").on("show.bs.collapse", function () {
   console.log($(this));
   $(this).addClass("active");
@@ -153,8 +155,6 @@ $("#celular-check-solicitud").keyup(function () {
     }, 2000);
   }
 });
-
-$(".dropdown-toggle").dropdown();
 
 $("#btn-mi-solicitud").click(function () {
   $("#celular-check-solicitud").removeClass("hidden");

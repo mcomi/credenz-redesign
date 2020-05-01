@@ -5,6 +5,8 @@ if (oferta === "true") {
   $("#step-1").removeClass("hidden");
 }
 
+$(".dropdown-toggle-dependencia").dropdown();
+
 $("input[name='dependencia']").on("change", function (e) {
   $("#select-dependencia-especifica").removeClass("hidden");
 });

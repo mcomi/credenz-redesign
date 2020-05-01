@@ -636,13 +636,11 @@ a {
 .input-form,
 .dropdown-toggle,
 .dropdown-toggle:hover,
-.btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
-.show > .btn-secondary.dropdown-toggle,
+.show > .btn.dropdown-toggle,
 .dropdown-menu,
-.btn-secondary:focus,
+.btn.dropdown-toggle:focus,
 .btn.dropdown-toggle,
-.btn-secondary.dropdown-toggle:not(:disabled):not(.disabled):active:focus {
+.dropdown-toggle:not(:disabled):not(.disabled):active:focus {
   /* styling */
   box-shadow: none;
   background-color: transparent;
@@ -702,10 +700,6 @@ select.form {
     calc(100% - 15px) calc(1em + 2px), 100% 0; */
   background-size: 12px, 1px;
   color: white;
-}
-
-.dropdown-menu-estado {
-  transform: translate3d(443px, 42px, 0px) !important;
 }
 
 select.form:after {
@@ -1599,6 +1593,12 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
 @keyframes rotate {
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@media (min-width: 800px) {
+  .dropdown-menu-estado {
+    transform: translate3d(443px, 42px, 0px) !important;
   }
 }
 
