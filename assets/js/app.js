@@ -212,3 +212,143 @@ $(function () {
   counterMonto.start();
   AOS.init();
 });
+
+// animacion pasos
+function getCurrentRotationFixed(elem) {
+  var el = elem;
+  var st = window.getComputedStyle(el, null);
+  var tr =
+    st.getPropertyValue("-webkit-transform") ||
+    st.getPropertyValue("-moz-transform") ||
+    st.getPropertyValue("-ms-transform") ||
+    st.getPropertyValue("-o-transform") ||
+    st.getPropertyValue("transform") ||
+    "fail...";
+
+  if (tr !== "none") {
+    console.log("Matrix: " + tr);
+
+    var values = tr.split("(")[1];
+    values = values.split(")")[0];
+    values = values.split(",");
+    var a = values[0];
+    var b = values[1];
+    var c = values[2];
+    var d = values[3];
+
+    var scale = Math.sqrt(a * a + b * b);
+
+    // First option, don't check for negative result
+    // Second, check for the negative result
+    /** /
+    var radians = Math.atan2(b, a);
+    var angle = Math.round( radians * (180/Math.PI));
+    /*/
+    var radians = Math.atan2(b, a);
+    if (radians < 0) {
+      radians += 2 * Math.PI;
+    }
+    var angle = Math.round(radians * (180 / Math.PI));
+    /**/
+  } else {
+    var angle = 0;
+  }
+
+  // works!
+  return angle;
+  console.log("Rotate: " + angle + "deg");
+}
+
+var _CURRENT_ANGLE = 0;
+var indexAnimation = 0;
+
+function rotateElementsInnerCircle() {
+  _CURRENT_ANGLE += 72;
+
+  $("#inner-circle-container").css({
+    transform: "rotate(" + _CURRENT_ANGLE + "deg)",
+  });
+
+  $(".circle").css({
+    transform: "rotate(-" + _CURRENT_ANGLE + "deg)",
+  });
+  $(".circle-text").css({
+    opacity: "0",
+  });
+  setTimeout(function () {
+    changeTextSteps();
+    setTimeout(function () {
+      $(".step-title:first").addClass("active");
+      $(".circle-text").css({
+        opacity: "1",
+      });
+    }, 100);
+  }, 500);
+}
+
+const step01 = `<h4 class="step-title">01 Elige tu crédito</h4>
+  <p>
+    <small>
+      Captura tu lugar de trabajo e Ingresos y podrás
+      visualizar las ofertas de crédito que tenemos para ti.
+    </small>
+  </p>`;
+const step02 = `<h4 class="step-title">02 Elige tu crédito</h4>
+  <p>
+    <small>
+      Captura tu lugar de trabajo e Ingresos y podrás
+      visualizar las ofertas de crédito que tenemos para ti.
+    </small>
+  </p>`;
+const step03 = `<h4 class="step-title">03 Elige tu crédito</h4>
+  <p>
+    <small>
+      Captura tu lugar de trabajo e Ingresos y podrás
+      visualizar las ofertas de crédito que tenemos para ti.
+    </small>
+  </p>`;
+const step04 = `<h4 class="step-title">04 Elige tu crédito</h4>
+  <p>
+    <small>
+      Captura tu lugar de trabajo e Ingresos y podrás
+      visualizar las ofertas de crédito que tenemos para ti.
+    </small>
+  </p>`;
+const step05 = `<h4 class="step-title">05 Elige tu crédito</h4>
+  <p>
+    <small>
+      Captura tu lugar de trabajo e Ingresos y podrás
+      visualizar las ofertas de crédito que tenemos para ti.
+    </small>
+  </p>`;
+
+const textSteps = [step01, step02, step03, step04, step05];
+
+function changeTextSteps() {
+  textSteps.push(textSteps.shift());
+  document.getElementById("step01").innerHTML = textSteps[0];
+  document.getElementById("step02").innerHTML = textSteps[1];
+  document.getElementById("step03").innerHTML = textSteps[2];
+  document.getElementById("step04").innerHTML = textSteps[3];
+  document.getElementById("step05").innerHTML = textSteps[4];
+}
+
+var testimoniosWaypoint = new Waypoint({
+  element: document.getElementById("step01"),
+  handler: function (direction) {
+    rotateElementsInnerCircle();
+    setTimeout(function () {
+      rotateElementsInnerCircle();
+      setTimeout(function () {
+        rotateElementsInnerCircle();
+        setTimeout(function () {
+          rotateElementsInnerCircle();
+          setTimeout(function () {
+            rotateElementsInnerCircle();
+          }, 3000);
+        }, 3000);
+      }, 3000);
+    }, 3000);
+  },
+  offset: "40%",
+});

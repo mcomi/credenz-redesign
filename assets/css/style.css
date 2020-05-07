@@ -380,6 +380,10 @@ body {
   text-align: center;
 }
 
+.step-title.active {
+  color: #f16192;
+}
+
 .row-with-medallion {
   position: relative;
   font-size: 24px;
@@ -400,10 +404,173 @@ body {
   animation-fill-mode: backwards;
 }
 
+.steps-animated-container {
+  margin-top: 7rem;
+}
+
+#outer-circle {
+  border-radius: 50%;
+  height: 500px;
+  width: 500px;
+  position: relative;
+  /* 
+     Child elements with absolute positioning will be 
+     positioned relative to this div 
+    */
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+}
+#outer-circle-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+}
+#inner-circle {
+  position: absolute;
+  border: 1px solid rgb(120, 117, 198);
+  border-radius: 50%;
+  height: 380px;
+  width: 380px;
+  /*
+     Put top edge and left edge in the center
+    */
+  top: 50%;
+  left: 50%;
+  margin: -190px 0px 0px -190px;
+  /* 
+     Offset the position correctly with
+     minus half of the width and minus half of the height 
+    */
+}
+
+#inner-circle-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotate(0deg);
+  transition: transform 0.7s linear;
+}
+
+.circle {
+  position: absolute;
+  /* left: calc(50% - 25px);
+  top: calc(50% - 25px); */
+  /* top: -25px; 
+  left: 175px;  */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  transition: transform 0.7s linear;
+  transform: rotate(0deg);
+}
+
+.circle:nth-child(1) {
+  top: -25px; /* -child size/2 */
+  left: 175px; /* parent size/2 - child size/2 */
+}
+
+.circle:nth-child(2) {
+  top: 97px;
+  left: -12px;
+}
+
+.circle:nth-child(3) {
+  top: 312px;
+  left: 47px;
+}
+
+.circle:nth-child(4) {
+  top: 319px;
+  left: 269px;
+}
+.circle:nth-child(5) {
+  top: 110px;
+  left: 344px;
+}
+
+.circle-text {
+  position: absolute;
+  height: auto;
+  width: 290px;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.circle-text:nth-child(1) {
+  left: calc(50% - 136px);
+  top: -90px;
+  /* transform: rotate(270deg) translateX(250px) rotate(-270deg); */
+}
+
+.circle-text:nth-child(2) {
+  left: -245px;
+  top: 107px;
+  /* transform: rotate(208deg) translateX(250px) rotate(-208deg); */
+}
+
+.circle-text:nth-child(3) {
+  left: -185px;
+  top: 323px;
+  /* transform: rotate(140deg) translateX(250px) rotate(-140deg); */
+}
+
+.circle-text:nth-child(4) {
+  left: 392px;
+  top: 332px;
+
+  /* transform: rotate(40deg) translateX(250px) rotate(-40deg); */
+}
+.circle-text:nth-child(5) {
+  left: 465px;
+  top: 126px;
+  /* transform: rotate(330deg) translateX(250px) rotate(-330deg); */
+}
+
 .icon-step {
   height: 20px;
   margin: 14px;
   fill: black;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes myOrbit {
+  100% {
+    transform: rotate(45deg);
+  }
+  /* from {
+    transform: rotate(0deg) translateX(1px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translateX(1px) rotate(-360deg);
+  } */
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rot {
+  from {
+    transform: inherit;
+  }
+  to {
+    transform: rotate(45deg) translate(-250px) rotate(-45deg);
+  }
 }
 
 .row-with-medallion small {
@@ -449,17 +616,20 @@ a {
   border-radius: 100%;
   width: 235px;
   height: 235px;
-  margin-left: 60px;
-  margin-top: 57px;
+  top: 19%;
+  left: 20%;
   position: absolute;
   border: 1px solid rgb(120, 117, 198);
 }
 
-.credenz-icon img {
-  width: 100px;
+.credenz-icon-inner img {
   position: absolute;
-  top: 36%;
-  left: 36%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100px; /*requires explicit height*/
 }
 .steps-icon {
   background: #ffffff;
@@ -483,37 +653,6 @@ a {
   color: #ffffff;
 }
 
-.steps-icon-1 {
-  position: absolute;
-  left: 37%;
-  top: 40px;
-  transition-property: left, top;
-  transition-duration: 3s;
-}
-
-.steps-icon-2 {
-  position: absolute;
-  left: -9px;
-  top: 33%;
-}
-
-.steps-icon-3 {
-  position: absolute;
-  right: 40px;
-  top: 33%;
-}
-
-.steps-icon-4 {
-  position: absolute;
-  right: 16%;
-  bottom: -3%;
-}
-
-.steps-icon-5 {
-  position: absolute;
-  left: 4%;
-  bottom: -3%;
-}
 .card-header {
   background: #ffffff;
   border-bottom: 0;
@@ -1589,24 +1728,6 @@ input[type="range"]:focus + .rangeslider .rangeslider__handle {
   }
   100% {
     transform: rotate(1800deg);
-  }
-}
-
-@keyframes myOrbit {
-  100% {
-    transform: rotate(45deg);
-  }
-  /* from {
-    transform: rotate(0deg) translateX(1px) rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg) translateX(1px) rotate(-360deg);
-  } */
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(-360deg);
   }
 }
 
